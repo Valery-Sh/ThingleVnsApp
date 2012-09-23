@@ -1,0 +1,13 @@
+// ADD a Thingle
+#thingles-new-popup-1-popup {
+  .or {
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: center;
+    @include text-shadow(#fff 0 1px 0);
+  }
+
+  .btn-primary {
+    margin: 1px 0 0 10px;
+  }
+}

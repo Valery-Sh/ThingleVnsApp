@@ -1,0 +1,38 @@
+<% _.each(rows, function(thing) { %>
+<figure data-id="<%= thing.get('_id') %>" class="draggable item preloader" draggable="true">
+    <div class="panel">
+        <a class="comments"><%=thing.get('stats').comments %></a>
+        <a class="likes" title="<%= thing.get('likes') %> Likes"><%= thing.get('likes') %></a>
+    </div>
+    <a href="#!things/<%= thing.get('_id') %>" class="img" draggable="false">
+        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAJEAAP////////4BAgAAACH5BAQUAP8ALAAAAAABAAEAAAICRAEAOw==" data-original="<%= thing.getWallPicture().url %>" draggable="false" height="<%= thing.getWallPicture().height %>" width="<%= thing.getWallPicture().width %>" alt="<%= thing.get('title') %>" title="<%= thing.get('title') %>"/>
+    </a>
+    <figcaption>
+        <div class="tools-panel owner-edit">
+            <% if (showDeleteButton) { %>
+                <a href="#" class="edit">#</a>
+            <% } else { %>
+                <a href="#" class="share" title="Share" data-name="<%= thing.get('title') %>" data-description="<%= thing.get('description') %>" data-img="<%= thing.getCoverPicture('small').url %>">R</a>
+            <% } %>
+            <a href="#" class="add" title="Add To Collection">+</a>
+            <a href="#" class="like <%= 
+                _.include(thing.get('likers'), App.currentUser.get('_id')) ? 'selected' :''
+            %>" title="Like">k</a>
+        </div>
+        <div class="title">
+            <h2><%= thing.get('title') %></h2>
+
+            <div class="info">
+                <% try { %>
+                    <a href="#!<%= (thing.get('curator') && 'users/' + thing.get('curator')._id) || '' %>" class="avatar" style="background-image: url(<%= (thing.get('curator') && thing.get('curator').picture.small) || '' %>)" title="View <%= (thing.get('curator').firstName)%> <%= (thing.get('curator').lastName)%>'s profile"></a>
+                <% } catch(e) {console.log(thing.get('curator'))} %>
+                <h2>
+                    <a href="#!<%= (thing.get('deck') && 'decks/' + thing.get('deck')._id) || '' %>" title="View Collection">
+                        <%= (thing.get('deck') && thing.get('deck').name) || '' %>
+                    </a>
+                </h2>
+            </div>
+        </div>
+    </figcaption>
+</figure>
+<% }); %>

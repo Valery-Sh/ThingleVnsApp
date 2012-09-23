@@ -1,0 +1,153 @@
+$modal-width: 560px;
+
+/*--- Thingle Modals ---*/
+.modal {
+  width: $modal-width;
+}
+.modal-inner {
+  background: url(data:image/png;base64,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) repeat;
+}
+.thingle-modal {
+  border: 0;
+  @include border-radius(0);
+
+  .modal-header {
+    padding: 9px 22px;
+    background: #63a2d5;
+    border: {
+      style: solid;
+      width: 1px;
+      color: #3178b2 #3178b2 #2d597c #3178b2;
+    };
+
+    h3 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 34px;
+    }
+    .close {
+      width: 15px;
+      height: 15px;
+      margin: 10px -1px 0 0;
+      background: sprite($sprite,modal-close) no-repeat;
+      @include opacity(1);
+    }
+  }
+  .modal-body {
+    overflow: hidden;
+    max-height: 550px;
+    padding: 20px;
+    border: {
+      style: solid;
+      width: 0 1px 1px;
+      color: #7a7a7a;
+    };
+  }
+  .modal-footer {
+    padding: 10px 20px;
+    position: relative;
+    border: {
+      style: solid;
+      width: 0 1px 1px;
+      color: #7a7a7a;
+    }; 
+    color: #515151;
+    background: #dddad8;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    @include text-shadow(rgba(#fff,.34) 0 1px 0);
+    @include box-shadow(none);
+    @include border-radius(0);
+
+    .grab-area {
+      display: block;
+      margin: -10px -20px;
+      padding: 10px 20px;
+      color: $default-font-color;
+      @include u(false,true);
+
+      &:before {
+        content: "";
+        display: block;
+        width: 75px;
+        height: 33px;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        background: sprite($sprite,tryit) no-repeat;
+      }
+    }
+  }
+}
+
+form {
+  margin: 0;
+}
+
+.modal-description {
+  position: relative;
+  padding: 10px 22px;
+  background: #c3e4fe;
+  border-bottom: 1px solid #7a7a7a;
+
+  p {
+    margin: 0;
+    color: #012847;
+    font-style: italic;
+  }
+  a {
+    color: #012847;
+    font-style: italic;
+    @include u(true); 
+  }
+}
+
+@import "blocks/modals/addnew";
+@import "blocks/modals/new-popup-1";
+@import "blocks/modals/decks-new";
+@import "blocks/modals/new-popup-2";
+
+.new-deck-field {
+  margin: 0 -10px -8px -10px;
+  padding: 10px 0 0 10px;
+  border-top: 1px solid #a1a1a1;
+  background: #dddad8;
+  @include nowrap;
+
+  input {
+    width: 188px;
+    margin-right: 10px;
+  }
+}
+
+@import "blocks/modals/edit-deck";
+@import "blocks/modals/repost";
+@import "blocks/modals/success";
+
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  background: #fff;
+  @include opacity(0.9);
+}
+
+// Message
+.message {
+  h3 {
+    a {
+      // color: $default-font-color;
+      color: #000;
+    }
+  }
+  .modal-footer {
+    text-align: right;
+  }
+}
+
+@import "blocks/modals/welcome";
+@import "blocks/modals/page-builder";
+
+/*--- end Thingle Modals ---*/

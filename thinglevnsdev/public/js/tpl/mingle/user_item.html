@@ -1,0 +1,9 @@
+<li class="user" <%= user._id ? "data-u_id='" + user._id + "'" :"" %> data-fbid="<%= user.fbid %>">
+    <a href="<%= user._id ? "#!users/" + user._id : "javascript:void(0);" %>" class="link-profile <%= user._id ? "invited" : '' %>">
+        <span class="img avatar" style="background-image:url(<%= user.pic_square%>)"></span>
+        <span class="username"><%= user.name %></span>
+    </a>
+    <span href="#" class="btn <%= deco[user.state].btnClass %>">
+        <%= deco[user.state].btnTxt %>
+    </span>
+</li>

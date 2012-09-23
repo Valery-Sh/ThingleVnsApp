@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thingle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" id="viewport"/>
+    <!--[if lt IE 9]>
+    <script src="js/ie9.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/drag_styles.css" media="all">
+</head>
+<body>
+
+<div id="wrapper">
+    <section id="auth" view="auth"></section>
+    <header>
+        <div class="inner">
+            <a href="/" class="logo"></a><a href="#" class="about">About</a>
+            <nav>
+                <ul>
+                    <li class="things-item"><a href="javascript:void(0);">Thingles</a></li>
+                    <li class="people-item"><a href="javascript:void(0);">People you follow</a></li>
+                </ul>
+                <div class="b-search">
+                    <form action="#" method="" id="search-form">
+                        <input type="text" name="search" id="search" class="form-text">
+                        <input type="submit" value="s" class="form-submit">
+                    </form>
+                </div>
+            </nav>
+            <div view="user-controls"></div>
+        </div>
+    </header>
+
+    <aside id="shelf" class="bg1" view="shelf"></aside>
+
+    <div id="content">
+        <section id="main">
+            <div class="static-page legal-page">
+                <h1>Legal</h1>
+                <aside class="static-leftside">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li class="active"><a href="#">Registration and Safety</a></li>
+                            <li><a href="#">Content Collection and Use</a></li>
+                            <li><a href="#">Copyright Policy</a></li>
+                            <li><a href="#">Privacy &amp; Rights</a></li>
+                            <li><a href="#">Legal Disclaimer</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <section class="static-content">
+                    <h2>Registration and Safety</h2>
+                    <p>We do our best to keep Thingle safe and we need your help to do so.</p>
+                    <p><b>Registration:</b> Thingle users provide their real names and information, and we need your help to keep it that way. Here are some commitments you make to us relating to registering and maintaining the security of your account: You will not provide any false personal information on Thingle , or create an account for anyone other than yourself without permission. You will not use Thingle if you are under 13. You will keep your contact information accurate and up-to-date. You will not use Thingle if you are a convicted sex offender.</p>
+                    <p><b>Passwords:</b> You are responsible for safeguarding the password that you use to access the Services and for any |activities or actions under your password. We encourage you to use "strong" passwords (passwords that use a combination of upper and lower case letters, numbers and symbols) with your account. You will not share your password, let anyone else access your account, or do anything else that might jeopardize the security of your account. Thingle cannot and will not be liable for any loss or damage arising from your failure to comply with the above requirements.</p>
+                    <p><b>Safety:</b> We do our best to keep Thingle safe, but we cannot guarantee it. We need your help to do that, which includes the following commitments. You will not upload viruses or other malicious code. You will not do anything that could disable, overburden, or impair the proper working of Thingle , such as a denial of service attack. You will not send or otherwise post unauthorized commercial communications such as spam on Thingle . You will not collect users' content or information, or otherwise access Thingle , using automated means such as harvesting bots, robots, spiders, or scrapers without our permission. You will not engage in unlawful multi-level marketing, such as a pyramid scheme, on Thingle . You will not solicit login information or access an account belonging to someone else.</p>
+                </section>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<div class="subnav about-subnav">
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- <li><a href="policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li> -->
+        <li><a href="legal.html">Legal</a></li>
+    </ul>
+</div>
+
+<div id="categories-menu" class="subnav things-subnav" view="categories-menu">
+    <div class="b-featured-things clr">
+        <h3>Featured Thingles</h3>
+        <h4 class="f-item-title">Food &amp; Drink</h4>
+        <figure>
+            <a href="#" class="img"><img src="tmp/food_drink.jpg" alt="Food &amp; Drink" width="98" height="98"></a>
+            <figcaption><a href="#" class="author">Thomas Kurtz</a>Delicious bites</figcaption>
+        </figure>
+        <div class="b-brought">
+            <div class="brought-label">Brought to you by</div>
+            <div class="brought-logo"><img src="tmp/amelie_emily.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8" src="js/lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/json2.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/backbone-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/require.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+<div class="hide" id="dragproxy"></div>
+</body>
+</html>
+

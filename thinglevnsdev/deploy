@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ $# == 0 ]
+then
+   echo "Usage: deploy <remote> <local_branch>:<remote_branch>"
+   exit
+fi
+
+REMOTE=$1
+LOCAL_BRANCH=${2:-"master"}
+REMOTE_BRANCH=${3:-"master"}
+
+echo
+echo "Build application"
+source ./build
+
+echo
+echo "Commit build artifact"
+git add dist
+git commit -m 'Commit build artifact'
+
+echo
+echo "Deploy"
+git push $REMOTE $LOCAL_BRANCH:$REMOTE_BRANCH

@@ -1,0 +1,8 @@
+// Repost popups
+#repost-popup {
+  @extend #thingles-new-popup-2-popup;
+
+  .btn-primary {
+    min-width: 120px;
+  }
+}

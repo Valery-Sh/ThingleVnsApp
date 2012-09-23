@@ -1,0 +1,29 @@
+{
+    "name": "thingle"
+  , "version": "1.3.0"
+  , "private": true
+  , "engines": {
+      "node": "0.8.1"
+    , "npm": ">=1.1.0"
+  }
+  , "dependencies": {
+      "express": "2.5.x"
+    , "express-resource": ">= 0.2.4"
+    , "ejs": ">= 0.0.1"
+    , "mongodb": ">= 0.9.x"
+    , "mongoose": "2.6.x"
+    , "nconf": ">=0.5.1"
+    , "knox": ">=0.0.9"
+    , "redis": ">=0.7.1"
+    , "hiredis": ">=0.1.14"
+    , "connect-redis": ">=1.0.0"
+    , "facebook-client": ">=1.6.1"
+    , "node-uuid": ">=1.3.3"
+    , "request": ">=2.9.203"
+    , "lingo": ">=0.0.4"
+    , "kue": ">=0.4.0"
+    , "async": ">=0.1.22"
+    , "sendgrid": ">=0.2.4"
+    , "moment": "1.6.x"
+  }
+}

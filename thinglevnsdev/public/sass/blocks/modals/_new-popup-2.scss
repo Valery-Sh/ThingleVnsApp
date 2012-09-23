@@ -1,0 +1,237 @@
+// 3th step modal for Add a Thingle
+#thingles-new-popup-2-popup {
+  &.fade.in {
+    top: 40% !important;
+  }
+  .modal-body {
+    overflow: visible;
+    padding: 0;
+    border-bottom: 0;
+  }
+  .modal-footer {
+    background: none;
+    text-align: right;
+
+    .btn {
+      vertical-align: middle;
+    }
+  }
+  .select-diff-image {
+    display: block;
+    padding: 0 0 0 38px;
+    position: relative;
+    border-bottom: 1px solid #7A7A7A;
+    color: #515151;
+    background: #dddad8;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 36px;
+    @include text-shadow(#fff 0 1px 0);
+    @include u(false,true);
+
+    &:before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 10px;
+      left: 21px;
+      background: sprite($sprite,diff-arrow) no-repeat;
+    }
+  }
+  .modal-top {
+    overflow: visible !important;
+    position: relative;
+    border-bottom: 1px solid #7a7a7a;
+    background: #f8f8f8;
+
+    .modal-top-inner {
+      // margin-bottom: 33px;
+      
+      &:after {
+        content: "";
+        display: block;
+        font-size: 0;
+        height: 0;
+        clear: both;
+      }
+    }
+
+
+    .img {
+      overflow: hidden;
+      float: left;
+      width: 170px;
+      max-height: 204px;
+      margin: 20px;
+      border: 1px solid #7A7A7A;
+      @include box-shadow(rgba(#000,.37) 0 2px 6px);
+
+      img {
+        width: 170px;
+      }
+    }
+
+    .info {
+      float: left;
+      margin: 20px 0;
+
+      input[type=text],
+      select {
+        width: 328px;
+      }
+      textarea {
+        width: 328px;
+        height: 89px;
+        margin-bottom: 5px;
+        resize: none;
+      }
+      .count {
+        float: right;
+      }
+    }
+
+    .toggle-options {
+      display: block;
+      height: 33px;
+      padding: 0 43px;
+      position: absolute;
+      bottom: -33px;
+      left: 19px;
+      border: {
+        style: solid;
+        color: #7a7a7a;
+        width: 0 1px 1px;
+      };
+      color: #515151;
+      background: #f8f8f8;
+      font-size: 14px;
+      line-height: 25px;
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: none;
+    }
+  }
+
+  .modal-bottom {
+    display: none;
+
+    .modal-bottom-inner {
+      padding: 47px 20px 10px;
+    }
+    .add-tags {
+      margin-top: 18px;
+      margin-bottom: 0;
+
+      .control-label {
+        width: 70px;
+      }
+      .controls {
+        margin-left: 75px;
+
+        input {
+          width: 442px;
+        }
+      }
+    }
+    .or {
+      display: inline-block;
+      margin: 0 22px;
+      padding-top: 10px;
+    }
+    .attach-files {
+      margin: 0 0 0 4px;
+      padding-right: 52px;
+      position: relative;
+
+      &:after {
+        content: "c";
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        font: normal 20px $P;
+      }
+    }
+    .add-link {
+      @extend .attach-files;
+      margin-left: 0;
+      padding-right: 57px;
+
+      &:after {
+        content: "j";
+      }
+    }
+    .scroll-pane {
+      height: 246px;
+      border: 1px solid #d9d8d8;
+      background: #f8f8f8;
+      @include border-radius(3px);
+
+      .jspVerticalBar {
+        margin-right: 3px;
+      }
+    }
+    .attached-files {
+      list-style: none;
+      margin: 0;
+      padding: 7px 15px;
+
+      li {
+        padding: 10px 0;
+        height: 38px;
+
+        span {
+          vertical-align: middle;
+          display: inline-block;
+          max-width: 436px;
+          color: #313131;
+          @include nowrap;
+          @include ellipsis;
+
+          a {
+            color: #313131;
+          }
+        }
+        .remove {
+          vertical-align: middle;
+          margin: 0 0 0 20px;
+          color: #949393;
+          font: normal 18px $P;
+          @include single-transition(color,0.3s);
+
+          &:hover {
+            color: #74716F;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .add-link-field {
+    display: none;
+    padding: 0 20px;
+
+    .btn {
+      margin-left: 18px;
+    }
+  }
+
+  .attached-count {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 20px;
+    font-style: normal;
+    font-weight: normal;
+    @include opacity(0);
+    @include single-transition(opacity,0.5s);
+  }
+
+  &.opened {
+    .attached-count {
+      @include opacity(1);
+    }
+  }
+}

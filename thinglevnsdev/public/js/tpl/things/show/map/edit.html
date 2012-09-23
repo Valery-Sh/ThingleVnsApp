@@ -1,0 +1,42 @@
+<div class="modal-header">
+    <button class="close" />
+    <h3>Add a location</h3>
+    <h4>You can enter the full addresses for the location.</h4>
+</div>
+<form action="javascript:void(0)" method="">
+    <div class="modal-body">
+        <aside class="location-left">
+            <div class="control-group location_address">
+                <label class="control-label">
+                    Location address
+                </label>
+                <div class="controls">
+                    <input type="text" name="location_address" value="<%= location.address %>" />
+                </div>
+            </div>
+        </aside>
+        <aside class="location-right">
+            <div class="control-group">
+                <label class="control-label">
+                    Location name (optional)
+                </label>
+                <div class="controls">
+                    <input type="text" name="location_name" value="<%= location.name %>"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">
+                    Notes (optional)
+                </label>
+                <div class="controls">
+                    <textarea name="location_notes" cols="30" rows="8"><%= location.notes %></textarea>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-add save" data-index="<%= index %>">
+        	<% if (index) {%>Save<% } else {%>Add location<% }%>
+        </button>
+    </div>
+</form>

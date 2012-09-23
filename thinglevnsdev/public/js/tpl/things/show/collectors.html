@@ -1,0 +1,15 @@
+<h2><span><%= title %></span></h2>
+<div class="editors">
+    <div class="scroll-pane horizontal">
+        <ul class="list-names">
+            <% _.each(collectors, function(collector) { %>
+            <li>
+                <a href="#!users/<%= collector.get("_id") %>" class="img"><span class="avatar" style="background-image:url(<%= collector.get("picture").medium %>);"></span></a>
+                <div class="info">
+                    <div class="username"><a href="#!users/<%= collector.get("_id") %>"><%= collector.get("firstName") %> <%= collector.get("lastName") %></a></div>
+                </div>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="modal-inner">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal"></button>
+        <h3>Create a Thingle</h3>
+    </div>
+    <div class="modal-body">
+        <fieldset>
+            <form id="grab-image-form">
+                <label>Grab images from the web</label>
+                <input name="url" type="url" class="span5" placeholder="http://">
+                <button class="btn btn-primary btn-submit">Find Images</button>
+            </form>
+
+            <p class="or">OR</p>
+            <form action="<%= params.get('action') %>" method="post" enctype="multipart/form-data" id="upload-image-form">
+                <input type="hidden" name="key" value="<%= params.get('folder') %>/${filename}">
+                <input type="hidden" name="AWSAccessKeyId" value="<%= params.get('AWSAccessKeyId') %>">
+                <input type="hidden" name="acl" value="<%= params.get('acl') %>">
+                <input type="hidden" name="success_action_redirect"
+                       value="<%= params.get('success_action_redirect') %>">
+                <input type="hidden" name="policy" value="<%- params.get('policy') %>">
+                <input type="hidden" name="signature" value="<%= params.get('signature') %>">
+                <input type="hidden" name="Content-Type" value="image/jpeg">
+                <label>Upload a photo from your computer</label>
+                <input name="file" type="file">
+                <a id="upload-image-button" class="btn btn-primary btn-submit">Upload</a>
+            </form>
+
+        </fieldset>
+    </div>
+</div>

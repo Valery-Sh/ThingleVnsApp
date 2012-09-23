@@ -1,0 +1,39 @@
+<h2><span>Map</span></h2>
+<div class="b-map<% if (locations.length == 0) { %> expanded<% } %>">
+    <div class="inner">
+        <div class="map-title">
+            <div class="locations-count"><span>@</span> <%= locations.length %> locations mapped</div>
+            <a href="javascript:void(0)" class="btn btn-black edit">Add Location</a>
+        </div>
+        <div class="map-right">
+            <div class="map-description">→ Select a row to view on map</div>
+            <div class="scroll-pane">
+                <ul class="users">
+					<% _.each(locations, function(location, index) { %>
+                    <li>
+                        <figure>
+                            <a href="#!users/<%= location.author._id %>" class="userpic">
+                                <span class="avatar" style="background-image:url(<%= location.author.picture.small %>);"></span>
+                            </a>
+                            <figcaption><%= index + 1 %></figcaption>
+                        </figure>
+                        <div class="info show" data-index="<%= index %>">
+                            <div class="title"><%= location.name %></div>
+                            <div class="location"><%= location.address %></div>
+                        </div>
+                    </li>
+					<% }); %>
+                </ul>
+            </div>
+        </div>
+        <div class="map-left">
+            <div class="map-description">→ Select a map label to view details</div>
+            <div class="map block"></div>
+            <a href="#" class="map-resize expand"></a>
+        </div>
+    </div>
+
+    <div id="add-location" class="block map-edit" />
+    <div id="details-location" class="block map-info" />
+    
+</div>

@@ -1,0 +1,31 @@
+<figure data-id="<%= user.get('_id') %>" class="user-profile profile-item">
+    <figcaption class="username">
+        <a href="http://facebook.com/<%= user.get('fbId') %>" class="facebook" target="_blank" title="<%= user.get('firstName') %> <%= user.get('lastName') %> on Facebook"></a>
+        <a href="#!users/<%=user.get('_id')%>" title="<%= user.get('firstName') %> <%= user.get('lastName') %>"><%= user.get('firstName') %><br /> <%= user.get('lastName') %></a>
+    </figcaption>
+    <div class="profile-item-inner">
+        <div class="profile-item-left">
+            <div class="profile-userpic"><img src="<%= user.get('picture').medium %>" alt="<%= user.get('firstName') %> <%= user.get('lastName') %>"></div>
+            <% if(authenticated) { %>
+                <% if(isMyProfile) { %>
+                    <!-- <a href="javascript:void(0)" class="btn btn-primary">Edit Profile</a> -->
+                <% } else {%>
+                    <a href="javascript:void(0)" id="follow-btn" class="follow" style="<%= !canFollow ? 'display: none' : '' %>">Follow</a>
+                    <a href="javascript:void(0)" id="unfollow-btn" class="follow" style="<%= canFollow ? 'display: none' : '' %>">Unfollow</a>
+                <% } %>
+            <% } %>
+        </div>
+        <div class="profile-item-right profile-stats">
+            <dl>
+                <dt>Likes</dt>
+                <dd><span title="Likes Received" class="stats-likedby"><%= stats.likedBy %></span></dd>
+                <dt>Thingles</dt>
+                <dd><span title="Thingles Created" class="stats-thinglescreated"><%= stats.thinglesCreated %></span></dd>
+                <dt>Collections</dt>
+                <dd><a href="#!users/<%=user.get('_id')%>/decks" title="Collections Active" class="stats-collections"><%= stats.collections %></a></dd>
+                <dt>Liked</dt>
+                <dd><span title="Liked This Many Thingles" class="stats-likes"><%= stats.likes %></span></dd>
+            </dl>
+        </div>
+    </div>
+</figure>

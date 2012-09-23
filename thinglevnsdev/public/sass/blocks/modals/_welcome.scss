@@ -1,0 +1,82 @@
+$welcome-width: 706px;
+
+//Welcome popup
+#welcome-popup {
+  width: $welcome-width;
+  top: 34%;
+  margin-left: -280px - (($welcome-width - $modal-width) / 2) ;
+  // height: 720px - 27;
+
+  .modal-body {
+    border-top-width: 1px;
+    max-height: 720px - 27;
+    height: 682px;
+    padding: 22px 63px 5px;
+    color: #3f3f3f;
+
+    .logo {
+      float: right;
+      width: 100px;
+      height: 59px;
+      position: relative;
+      right: 10px;
+      background: sprite($sprite,logo2) no-repeat;
+      text-indent: -9999px;
+
+      &.beta {
+        &:after {
+          content: "beta";
+          margin: 0 0 0 7px;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          font-size: 23px;
+          text-indent: 0;
+        }
+      }
+    }
+
+    h1 {
+      clear: both;
+      font-size: 30px;
+      font-style: italic;
+      margin: 0;
+
+      + p {
+        margin: 0 0 13px;
+        font-size: 16px;
+      }
+    }
+
+    .video {
+      margin: 0 0 27px;
+    }
+
+    .col {
+      vertical-align: top;
+      display: inline-block;
+      width: 220px;
+      margin: 0;
+      padding: 0 0 30px;
+
+      & + .col {
+        margin-left: 64px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+      .btn {
+        padding: 10px 15px;
+      }
+    }
+
+    .description {
+      font-size: 11px;
+
+      a {
+        color: #61a0d6;
+      }
+    }
+  }
+}

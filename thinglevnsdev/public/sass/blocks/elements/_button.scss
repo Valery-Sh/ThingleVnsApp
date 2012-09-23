@@ -1,0 +1,103 @@
+// .button {
+//   display: block;
+//   padding: 0 10px;
+//   border: 1px solid #141414;
+//   color: #fff;
+//   font-size: 14px;
+//   font-style: italic;
+//   font-weight: bold;
+//   line-height: 33px;
+//   text-align: center;
+//   background: #3f3f3f;
+//   @include border-radius(4px);
+//   @include u(false,true);
+//   @include moz-dots-remove(false,true);
+// }
+
+.btn {
+  vertical-align: top;
+  height: 36px;
+  margin: 1px 0 0;
+  padding: 10px 20px;
+  border-color: #858584;
+  color: #454545;
+  background: #c6c6c6;
+  font: italic bold 14px $default-font-family;
+  @include text-shadow(#fff 0 1px 0);
+  @include box-shadow(none);
+  @include single-transition(all,0.3s);
+
+  &:hover, 
+  &:active, 
+  &.active,
+  &.disabled,
+  &[disabled] {
+    background-color: #e3e2e2;
+    @include single-transition(all,0.3s);
+  }
+  &.disabled, 
+  &[disabled] {
+    color: #868686;
+  }
+}
+.btn-primary {
+  padding: 10px 27px;
+  border-color: #141414;
+  color: #fff;
+  background: #3f3f3f;
+  @include text-shadow(none);
+
+  &:hover, 
+  &:active, 
+  &.active, 
+  &.disabled, 
+  &[disabled] {
+    background-color: #333;
+  }
+}
+.btn-success {
+  padding: 10px 27px;
+  border-color: #858584;
+  color: #465501;
+  background-color: #c5e801; 
+
+  &:hover, 
+  &:active, 
+  &.active, 
+  &.disabled, 
+  &[disabled] {
+    color: #465501;
+    background-color: #d9ff05;
+  }
+}
+.btn-add {
+  padding: 10px 27px;
+  border-color: #0d4878;
+  color: #fff;
+  background-color: #2a80c5; 
+  @include text-shadow(none);
+
+  &:hover, 
+  &:active, 
+  &.active, 
+  &.disabled, 
+  &[disabled] {
+    color: #fff;
+    background-color: #196cae;
+  }
+}
+.btn-black {
+  background: #181818;
+  border-color: #181818;
+  color: #fff;
+  @include text-shadow(none);
+
+  &:hover, 
+  &:active, 
+  &.active, 
+  &.disabled, 
+  &[disabled] {
+    color: #fff;
+    background-color: #333;
+  }
+}

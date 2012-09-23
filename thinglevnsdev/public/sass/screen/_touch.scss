@@ -1,0 +1,18 @@
+.touch {
+  #content {
+    .item {
+      .tools-panel {
+        // display: block;
+        width: auto;
+        @include opacity(1);
+
+        + .title {
+          margin-right: 130px - 25 - 22;
+        }
+        &.owner-edit + .title {
+          margin-right: 130px;
+        }
+      }
+    }
+  }
+}

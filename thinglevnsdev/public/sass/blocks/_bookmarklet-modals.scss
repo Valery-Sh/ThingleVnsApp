@@ -1,0 +1,69 @@
+.bookmarklet-modal {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  @include box-shadow(none);
+
+  .modal-inner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 58px;
+    padding: 20px 0 20px 20px;
+    min-width: 635px;
+
+    .img {
+      overflow: hidden;
+      float: left;
+      max-width: 202px;
+      margin: 5px 25px 5px 5px;
+      border: 1px solid #7a7a7a;
+      @include box-shadow(rgba(#000,.37) 0 2px 6px);
+
+      img {
+        display: block;
+        max-width: 200px;
+        max-height: 400px;
+      }
+    }
+
+    .info {
+      float: left;
+      width: 380px;
+      padding: 5px 0 0;
+
+      select {
+        width: 370px;
+      }
+      textarea {
+        width: 370px;
+        height: 89px;
+        margin-bottom: 5px;
+        resize: none;
+      }
+    }
+  }
+
+  .modal-footer {
+    border-width: 1px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+  }
+
+  .but-facebook {
+    display: inline-block;
+    width: 198px;
+    height: 37px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -18px 0 0 -99px;
+    background: sprite($sprite,but-facebook) no-repeat;
+  }
+}

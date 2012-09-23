@@ -1,0 +1,19 @@
+<div class="comments-nav">
+    <a href="javascript:void(0);" class="prev disabled"></a><a href="javascript:void(0);" class="next"></a>
+</div>
+<div class="scrollable">
+    <div class="items">
+        <% _.each(comments, function(comment, i) { %>
+            <% if (i%2==0) { %><div><% } %>
+            <% var user = comment.get('author'); %>
+            <div class="comment">
+                <div class="username">
+                    <a href="#!users/<%=user._id%>" title="<%= user.firstName %> <%= user.lastName %>"><%= user.firstName %><br /> <%= user.lastName %></a>
+                </div>
+                <p><%= nl2br(_.escape(comment.get('text'))) %></p>
+                <div class="date"><%= DateHelper.format(comment.get('createdAt')) %></div>
+            </div>
+            <% if ((i+1)%2==0) { %></div><% } %>
+        <% }); %>
+    </div>
+</div>

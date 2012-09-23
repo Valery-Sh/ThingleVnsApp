@@ -1,0 +1,17 @@
+<h2><span><%= title %></span></h2>
+<a href="javascript:void(0);" class="details-edit">p</a>
+<div class="details-tags bg1">
+    <div class="inner">
+        <form action="#" method="">
+            <div class="control-group">
+                <input name="tags" type="text" placeholder="Add your tags">
+                <button class="btn btn-add" type="submit">Add tags</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="tags-list">
+    <% _.each(thing.get('tags'), function(tag, i) { %>
+        <div class="tag" data-tag="<%= tag %>"><a href="#?q=<%= encodeURIComponent(tag) %>" target="_blank"><%= tag %></a><a href="javascript:void(0);" class="remove">*</a></div>
+    <% }); %>
+</div>

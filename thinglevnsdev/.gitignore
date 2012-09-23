@@ -1,0 +1,15 @@
+node_modules
+.idea
+*.iml
+*.ipr
+*.iws
+.DS_Store
+cloud9
+.c9revisions/
+.settings
+.settings*
+.settings.xml
+config/env/development.js
+public/sass-cache
+public/.sass-cache
+public/images/sprite-*.png

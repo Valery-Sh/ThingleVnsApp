@@ -1,0 +1,90 @@
+.b-head-buttons {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  > .profile > a,
+  > a {
+    @include ie7-inline;
+    width: 60px;
+    height: 70px;
+    margin: 0 0 0 13px;
+    position: relative;
+    @include u(false,true);
+  }
+
+  // Add new link
+  .add {
+    padding: 42px 0 0;
+    background: #9c1e28;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    @include box-shadow(rgba(#000,.46) 0 0 5px);
+    @include link-colors(#fff,#fff);
+
+    &:before {
+      content: "&";
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      margin: 0 0 0 -6px;
+      color: #fff;
+      font: normal 18px $P;
+      // background: sprite($sprite,white-plus) no-repeat;
+    }
+  }
+
+  // Profile link
+  .profile {
+    display: inline-block;
+    position: relative;
+
+    > a {
+      @extend .add;
+      overflow: hidden;
+      background-color: #176AB6;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &.logged {
+      @extend %navhover;
+
+      > a {
+        text-indent: -9999px;
+        background-position: 50% 50%;
+        @include background-size(cover);
+      }
+    } 
+  }
+
+  // Open/Close shelf
+  .shelf-toggle {
+    height: 50px;
+    position: relative;
+    border-left: 1px solid #39638b;
+    background: #4d8cbf;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 15px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -7px 0 0 -6px;
+      background: sprite($sprite, arrow-shelf-left) no-repeat;
+    }
+
+    &.opened:before {
+      background: sprite($sprite, arrow-shelf-right) no-repeat;
+    }
+  }
+}

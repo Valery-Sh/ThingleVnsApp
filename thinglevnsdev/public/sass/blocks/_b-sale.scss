@@ -1,0 +1,53 @@
+.b-sale {
+  overflow: hidden;
+  width: 219px;
+  margin: 0;
+  padding: 18px 0 8px;
+  position: relative;
+  border-bottom: 1px solid #7a7a7a;
+  background: #f6f6f6;
+
+  .close {
+    display: block;
+    width: 20px;
+    height: 21px;
+    position: absolute;
+    top: 27px;
+    right: 14px;
+    color: #d0cece;
+    font: normal 24px $P;
+    cursor: pointer;
+    @include opacity(1);
+
+    &:hover {
+      color: #74716F;
+    }
+  }
+
+  .img {
+    text-align: center;
+  }
+
+  figcaption {
+    min-height: 33px;
+    position: relative;
+
+    i.open {
+      display: block;
+      width: 65px;
+      height: 33px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: sprite($sprite,sale) no-repeat;
+      cursor: pointer;
+    }
+    a {
+      display: block;
+      padding: 8px 5px;
+      margin: 0 0 0 70px;
+      color: #2d2d2d;
+      @include force-wrap;
+    }
+  }
+}

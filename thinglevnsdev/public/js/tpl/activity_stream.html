@@ -1,0 +1,84 @@
+<div class="b-activity-stream">
+    <aside class="notifications block">
+        <div class="block-title">
+            <h3><a href="javascript:void(0);" class="notifications-panel-toggle">configure notifications</a></h3>
+        </div>
+
+        <div class="block-inner">
+            <div class="scrollable">
+                <div class="items">
+                    <div>
+                        <ul>
+                            <% var inc = 0; %>
+                            <% _.each(models, function(n) { %>
+                            <%
+                            if (inc >= 9) {
+                            inc = 0;
+                            %>
+                        </ul></div><div><ul>
+                            <%
+                            }
+                            inc++;
+                            %>
+                            <li class="notification" data-id="<%= n.get('_id') %>">
+                                <div>
+                                    <a href="#!users/<%= n.get("sender")._id %>" class="avatar" style="background-image:url('<%= n.get("sender").picture.small %>')"></a>
+                                    <span class="info">
+                                        <span><%= n.get("text") %></span>
+                                    </span>
+                                    <span class="date"><%= DateHelper.format(n.get("createdAt"), "%J") %></span>
+                                </div>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <a class="prev"></a>
+                <a class="next"></a>
+                <div class="navi"></div>
+            </div>
+        </div>
+
+        <!------------- Notifications Settings ---------------->
+        <div class="block-inner" style="display:none">
+        <!--div class="block-inner"-->            
+            <div class="notifications-settings">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Right Away</th>
+                            <th>Daily</th>
+                            <th>Weekly</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <% _.each(nsModels.models, function(n) { %>
+                    
+                    
+                        <tr>
+                            <td><%= n.get('title') %></td>
+                            <td colspan="3">
+                                <div class="btn-group" data-toggle="buttons-radio-event"
+                                     _id="<%= n.id %>">
+                                    <button _id="<%= n.id %>" type="button" class="btn"><%= n.get('value') == 0 ? '3' : '_' %></button>
+                                    <button _id="<%= n.id %>" type="button" class="btn"><%= n.get('value') == 1 ? '3' : '_' %></button>
+                                    <button _id="<%= n.id %>" type="button" class="btn"><%= n.get('value') == 2 ? '3' : '_' %></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <%}); %>    
+                    </tbody>
+                </table>
+                <div class="close-panel">
+                    <a href="#">close <span>{</span></a>
+                </div>
+            </div>
+        </div>
+
+
+    </aside>
+
+    <section id="notification-content" class="stream block bg1" style="display: none;"></section>
+</div>

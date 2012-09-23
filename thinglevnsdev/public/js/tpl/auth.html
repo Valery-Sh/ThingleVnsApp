@@ -1,0 +1,62 @@
+<div id="fb-root"></div>
+<script type="text/javascript">
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId:'<%= fb_app_id %>', // App ID
+            channelUrl:'<%= channel_file %>', // Channel File
+            status:true, // check login status
+            cookie:true, // enable cookies to allow the server to access the session
+            xfbml:true  // parse XFBML
+          , frictionlessRequests:true
+          , oauth:true /** Are we using oauth? */
+        });
+        console.log(FB);
+        App.trigger('fb-loaded');
+
+        // Additional initialization code here
+        
+        //This would attempt to login everyone automatically
+        //App.trigger('fb-login');
+        FB.getLoginStatus(function(fbResponse){
+          var fbR = fbResponse;
+          if(fbR.status){
+            if( fbR.status === "connected"){
+              //User is logged into facebook and our app is authed
+              App.trigger('fb-authed', fbR);
+            } else
+            if( fbR.status === "not_authorized"){
+              //User is logged into facebook but our app is not authed
+              App.trigger('fb-notauthed');
+            } else
+            if( fbR.status === "unknown"){
+              //User is not logged into facebook
+              App.trigger('fb-unknown');
+            }
+          }
+        });
+        
+        // listen for and handle auth.statusChange events
+        // This seems the only way to get the results of 
+        // FB.init({status:true}) without manual / polling lookups
+        FB.Event.subscribe('auth.statusChange', function(response) {
+          console.log(response);
+          if (response.authResponse) {
+            App.trigger('fb-authed');
+          }
+        });
+    };
+
+    // Load the SDK Asynchronously
+    (function (d) {
+        var js, id = 'facebook-jssdk',
+                ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement('script');
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+</script>

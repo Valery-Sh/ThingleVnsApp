@@ -1,0 +1,31 @@
+input {
+  height: 38px;
+  padding: 10px;
+}
+input, textarea {
+  vertical-align: top;
+  color: #aeaeae;
+  font-size: 16px;
+  font-style: italic;
+  border-color: #a1a1a1;
+}
+input[type="file"] {
+  font-size: 14px;
+}
+label {
+  color: #545454;
+  font-size: 14px;
+
+  .form-horizontal &.control-label {
+    text-align: left;
+  }
+}
+.form-horizontal .control-label {
+  padding-top: 9px;
+}
+
+.disabled-bg {
+  background: #d2d0d0 url(../images/dis-bg.png) repeat 0 0;
+}
+
+@import "blocks/plugins/combobox";

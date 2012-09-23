@@ -1,0 +1,59 @@
+.details-collections {
+  overflow: hidden;
+
+  .collections {
+    overflow: hidden;
+    list-style: none;
+    margin: 0 -18px 0 0;
+    padding: 0;
+
+    li {
+      float: left;
+      margin: 30px 18px 0;
+      position: relative;
+
+      .collection {
+        .img {
+          display: block;
+          padding: 10px;
+          border: 1px solid #6d6d6d;
+          background: #fff;
+          @include transition(all 0.2s);
+
+          &:hover {
+            background: #2a80c5;
+          }
+
+          span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #6d6d6d;
+          }
+        }
+      }
+
+      .owner {
+        @extend .collection;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+
+        .img {
+          padding: 5px;
+          background: #e2e1e1;
+          @include transition(all 0.2s);
+
+          &:hover {
+            background: #2a80c5;
+          }
+
+          span {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

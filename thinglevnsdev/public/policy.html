@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thingle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" id="viewport"/>
+    <!--[if lt IE 9]>
+    <script src="js/ie9.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/drag_styles.css" media="all">
+</head>
+<body>
+
+<div id="wrapper">
+    <section id="auth" view="auth"></section>
+    <header>
+        <div class="inner">
+            <a href="/" class="logo"></a><a href="#" class="about">About</a>
+            <nav>
+                <ul>
+                    <li class="things-item"><a href="javascript:void(0);">Thingles</a></li>
+                    <li class="people-item"><a href="javascript:void(0);">People you follow</a></li>
+                </ul>
+                <div class="b-search">
+                    <form action="#" method="" id="search-form">
+                        <input type="text" name="search" id="search" class="form-text">
+                        <input type="submit" value="s" class="form-submit">
+                    </form>
+                </div>
+            </nav>
+            <div view="user-controls"></div>
+        </div>
+    </header>
+
+    <aside id="shelf" class="bg1" view="shelf"></aside>
+
+    <div id="content">
+        <section id="main">
+            <div class="static-page policy-page">
+                <h1>Privacy Policy</h1>
+                <aside class="static-leftside">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Preamble</a></li>
+                            <li class="active"><a href="#">Content Collection and Use</a></li>
+                            <li><a href="#">Content Sharing and Disclosure</a></li>
+                            <li><a href="#">Protection of Rights</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Policy Changes</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <section class="static-content">
+                    <h2>Content Collection and Use</h2>
+                    <p>Thingle will collect and use your content and provided information to understand the use of it and to improve our services for you.</p>
+                    <p>When you create or reconfigure a Thingle account, you provide some personal information, such as your name, first name, domicile address, country, email, username and password. Some of this information, for example, your name and username, is listed publicly on our Services, including on your profile page and in search results. We may use your contact information to send you information about our Services or to market to you. You may unsubscribe from these messages by following the instructions contained within the messages or the instructions on our web site. If you email us, we may keep your message, email address and contact information to respond to your request.</p>
+                    <p><b>Additional Information:</b> You may provide us with additional information to make public, such as a short biography, your location, or a picture. You may customize your account with information such as a cell phone number for the delivery of SMS messages or your address book so that we can help you find Thingle users you know.</p>
+                    <p><b>Access Device:</b> When you access Thingle from a computer, mobile phone, or other device, we may collect information from that device about your browser type, location, and IP address, as well as the pages you visit. Cookies: Thingle use cookies to make Thingle easier to use, to make our advertising better, and to protect both you and Thingle . For example, we use them to store your login ID (but never your password) to make it easier for you to login whenever you come back to Thingle . We also use them to confirm that you are logged into Thingle, and to know when you are interacting with Thingle Platform applications and websites, our widgets and Share buttons, and our advertisements. You can remove or block cookies using the settings in your browser, but in some cases that may impact your ability to use Thingle.</p>
+                    <p><b>Links:</b> Thingle may keep track of how you interact with Thingle and links across our Services including third party clients by redirecting clicks or through other means. We do this to help improve our Services, including advertising, and to be able to share aggregate click statistics such as how many times a particular link was clicked on.</p>
+                    <p><b>Log Data:</b> Our server's automatically record information ("Log Data") created by your use of the Services. Log Data may include information such as your IP address, browser type, the referring domain, pages visited, and search terms. Other actions, such as interactions with advertisements, may also be included in Log Data.</p>
+                    <p><b>Site activity information:</b> We keep track of some of the actions you take on Thingle , such as adding connections including joining a group or adding a friend, creating a photo album, sending a gift, poking another user, indicating you like a post, attending an event, or connecting with an application. In some cases you are also taking an action when you provide information or content to us. For example, if you share a video, in addition to storing the actual content you uploaded, we might log the fact that you shared it. </p>
+                    <p><b>Third Party Services:</b> Thingle uses a variety of services hosted by third parties to help provide our Services, such as hosting our various blogs and wikis, and to help us understand the use of our Services, such as Google Analytics. These services may collect information sent by your browser as part of a web page request, such as cookies or your IP request.</p>
+                </section>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<div class="subnav about-subnav">
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="legal.html">Legal</a></li>
+    </ul>
+</div>
+
+<div id="categories-menu" class="subnav things-subnav" view="categories-menu">
+    <div class="b-featured-things clr">
+        <h3>Featured Thingles</h3>
+        <h4 class="f-item-title">Food &amp; Drink</h4>
+        <figure>
+            <a href="#" class="img"><img src="tmp/food_drink.jpg" alt="Food &amp; Drink" width="98" height="98"></a>
+            <figcaption><a href="#" class="author">Thomas Kurtz</a>Delicious bites</figcaption>
+        </figure>
+        <div class="b-brought">
+            <div class="brought-label">Brought to you by</div>
+            <div class="brought-logo"><img src="tmp/amelie_emily.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8" src="js/lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/json2.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/backbone-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/require.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+<div class="hide" id="dragproxy"></div>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+<div class="profile-container"></div>
+
+<% _.each(decks.models, function(deck) { %>
+<figure data-id="<%= deck.id %>" class="item deck">
+    <a href="#!decks/<%= deck.id %>" class="img avatar" title="View <%= deck.get('name') %> Collection" style="background-image:url(<%= (things.get(deck.thing_ids[0]) && things.get(deck.thing_ids[0]).getCoverPicture('medium').url) || '' %>)">
+         <% if (isMyProfile){ %> 
+          <span class="delete-deck">#</span>
+        <% } %>
+        <span class="deck-name">
+            <%= deck.get('name') %>
+        </span>
+    </a>
+    <figcaption>
+        <ul>
+            <li><a href="#!<%= (things.get(deck.thing_ids[1]) && 'things/' + deck.thing_ids[1]) || '' %>" class="avatar" style="background-image:url(<%= (things.get(deck.thing_ids[1]) && things.get(deck.thing_ids[1]).getCoverPicture('small').url) || '' %>)"></a></li>
+            <li><a href="#!<%= (things.get(deck.thing_ids[2]) && 'things/' + deck.thing_ids[2]) || '' %>" class="avatar" style="background-image:url(<%= (things.get(deck.thing_ids[2]) && things.get(deck.thing_ids[2]).getCoverPicture('small').url) || '' %>)"></a></li>
+            <li><a href="#!<%= (things.get(deck.thing_ids[3]) && 'things/' + deck.thing_ids[3]) || '' %>" class="avatar" style="background-image:url(<%= (things.get(deck.thing_ids[3]) && things.get(deck.thing_ids[3]).getCoverPicture('small').url) || '' %>)"></a></li>
+        </ul>
+    </figcaption>
+</figure>
+<% }); %>

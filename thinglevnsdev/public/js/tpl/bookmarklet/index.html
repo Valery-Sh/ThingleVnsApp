@@ -1,0 +1,42 @@
+<div class="modal thingle-modal bookmarklet-modal">
+    <form id="thing-form">
+        <div class="modal-inner">
+            <div class="img">
+                <img src="<%= url %>">
+            </div>
+            <div class="info">
+                <div class="control-group">
+                    <label>Thingle title:</label>
+                    <input type="text" name="title" class="span5">
+                </div>
+                <div class="control-group">
+                    <label>Description:</label>
+                    <textarea cols="30" rows="10" name="description"></textarea>
+                </div>
+                <div class="control-group">
+                    <label>Tags (comma separated values):</label>
+                    <input type="text" name="tags" class="span5"/>
+                </div>
+                <div class="control-group">
+                    <label>Collection:</label>
+                    <select name="deck">
+                        <% _.each(decks, function(deck) { %>
+                        <% var selected = deck.get('_id') == lastSelectedCollection ? "selected='selected'" : ''; %>
+                        <option value="<%= deck.get('_id') %>" <%= selected  %> >
+                            <%= deck.get('name') ? deck.get('name') : "" %>
+                        </option>
+                        <% }); %>
+                    </select>
+                </div>
+				<div class="control-group">
+                	<label for="post-facebook" class="checkbox inline">
+                    	<input type="checkbox" name="share" id="post-facebook" checked="checked"/>Post to Facebook
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0)" class="submit-btn btn btn-primary">Save</a>
+        </div>
+    </form>
+</div>

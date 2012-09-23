@@ -1,0 +1,44 @@
+@import "blocks/static-page";
+
+/*--- Contact ---*/
+.contact-page {
+  h1 {
+    padding-left: 44px;
+    
+    &:before {
+      content: "";
+      display: block;
+      width: 31px;
+      height: 22px;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      background: sprite($sprite,phone) no-repeat;
+    }
+  }
+
+  .static-content {
+    address {
+      display: block;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .send-email {
+      display: inline-block;
+      padding: 30px 0;
+      border-top: 1px solid #c7c7c7;
+
+      h3 {
+        display: inline-block;
+        margin: 0 15px 0 0;
+      }
+
+      .email {
+        color: #2A80C5;
+        font-size: 20px;
+      }
+    }
+  }
+}
+/*--- end Contact ---*/

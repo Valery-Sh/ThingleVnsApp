@@ -1,0 +1,4 @@
+<a href="<%= global.config.currentHostName %>#!users/<%= sender._id || sender %>">
+    <%= sender.firstName ? sender.firstName : "User" %> <%= sender.lastName || "" %>
+</a>
+ contributed to <a href="#<%= global.config.currentHostName + "#!things/" + objects.thing._id %>">Thingle</a> you are <%= isCurator ? "curator" : "editor" %> of.

@@ -1,0 +1,154 @@
+.editors {
+  .scroll-pane {
+    width: 940px;
+
+    .jspHorizontalBar {
+      display: block;
+    }
+    .jspTrack {
+      height: 13px;
+      background: #dddad8;
+      @include border-radius(6px);
+    }
+    .jspDrag {
+      height: 13px;
+      background: #a09c99;
+      @include border-radius(6px);
+    }
+  }
+
+  .list-names {
+    // overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 18px 12px 30px;
+    @include nowrap;
+
+    li {
+      vertical-align: middle;
+      display: inline-block;
+      width: 182px;
+      height: 85px;
+      margin: 0;
+      padding: 15px 10px 0 18px;
+      position: relative;
+      border: {
+        style: solid;
+        width: 0 1px 0 0;
+        color: #3f3f3f;
+      };
+
+      &:first-child {
+        border-left-width: 1px;
+      }
+
+      h3 {
+        text-align: right;
+        font-size: 18px;
+        line-height: 20px;
+        margin: 0 30px 0 0;
+      }
+
+      .img {
+        float: left;
+        display: block;
+        border: 1px solid #6d6d6d;
+        background: #e2e1e1;
+        padding: 5px;
+        position: relative;
+        @include transition(all 0.2s);
+
+        &:hover {
+          background: #2a80c5;
+        }
+
+        span {
+          display: block;
+          width: 40px;
+          height: 40px;
+          border: 1px solid #6d6d6d;
+        }
+      }
+      .info {
+        margin: 0 0 0 73px;
+        color: #111;
+
+        .username {
+          @include force-wrap;
+          
+          a {
+            color: #111;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 18px;
+            @include transition(color 0.2s);
+
+            &:hover {
+              text-decoration: none;
+              color: #2a80c5;
+            }
+          }
+        }
+        .date {
+          font-size: 14px;
+        }
+      }
+
+      .revert {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 25px;
+        color: #9c1e28;
+        font-style: italic;
+        @include opacity(0);
+        @include transition(all 0.2s);
+
+        &:before {
+          content: "0";
+          vertical-align: middle;
+          margin: 0 3px 0 0;
+          font: normal 21px $P;
+        }
+
+        &:hover {
+          text-decoration: none;
+          font-weight: bold;
+        }
+      }
+
+      &:hover {
+        .revert {
+          display: block;
+          top: -18px;
+          @include opacity(1);
+        }
+      }
+
+      // Curator
+      &.curator {
+        .img {
+          &:after {
+            content: "Curator";
+            display: block;
+            width: 50px;
+            height: 16px;
+            position: absolute;
+            bottom: -18px;
+            left: -1px;
+            color: #795d0a;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            border: {
+              style: solid;
+              color: #6d6d6d;
+              width: 0 1px 1px;
+            };
+            background: #f4c22b;
+          }
+        }
+      }
+    }
+  }
+}

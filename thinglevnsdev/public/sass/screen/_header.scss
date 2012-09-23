@@ -1,0 +1,98 @@
+%navhover {
+  &:hover .subnav {
+    visibility: visible;
+    display: block;
+    width: auto;
+    height: auto;
+    @include opacity(1);
+  }
+}
+
+/*--- Header ---*/
+header {
+  z-index: 11;
+  min-width: $default-page-width;
+  padding: 0 0 11px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #8c8c8c;
+  color: #fff; 
+  background: #dbdbdb; 
+  @include box-shadow(inset #e6e6e6 0 0 0 1px);
+
+  .inner {
+    height: 51px;
+    padding: 8px 0 0 12px;
+    border-bottom: 1px solid #39638b;
+    background: #63a2d5;
+  }
+
+  .logo {
+    z-index: 2;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: 33px;
+    position: relative;
+    margin: 0 15px 0 0;
+    border-right: 1px solid #fff;
+
+    img {
+      margin-right: 13px;
+    }
+  }
+
+  .about {
+    @extend %navhover;
+    display: inline-block;
+    z-index: 2;
+    vertical-align: top;
+    position: relative;
+    font-size: 15px;
+    line-height: 33px;
+    padding-bottom: 3px;
+
+    .subnav {
+      top: 10px;
+    }
+  }
+
+
+  // Main menu
+  nav {
+    z-index: 2;
+    position: absolute;
+    left: 180px;
+    right: 215px;
+    top: 0;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+
+    > ul {
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0 0 9px;
+      padding: 10px 0;
+
+      > li {
+        @extend %navhover;
+        @include ie7-inline;
+        padding: 0 17px 3px;
+        line-height: 30px;
+        font-size: 15px;
+        position: relative;
+      }
+    }
+
+    // Search block
+    @import "blocks/b-search";
+  }
+}
+
+@import "blocks/b-head-buttons";
+@import "blocks/nav-submenu";
+
+/*--- End Header ---*/

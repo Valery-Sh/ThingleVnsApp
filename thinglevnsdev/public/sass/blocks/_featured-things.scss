@@ -1,0 +1,73 @@
+.b-featured-things {
+  vertical-align: top;
+  @include inline-block;
+  // min-height: 406px;
+  margin: 0 0 0 27px;
+  padding: 10px;
+  position: relative;
+  border: 1px solid #adacac;
+  background: #dddad8;
+  text-align: center;
+
+  h3 {
+    padding: 0 0 8px;
+    position: relative;
+    color: #515151;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    @include text-shadow(#fff 0 1px 0);
+
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 74px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin: 0 0 0 -37px;
+      font-size: 0;
+      background: #757575;
+    }
+  }
+  h4 {
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+    @include text-shadow(#fff 0 1px 0);
+  }
+  figure {
+    min-height: 260px;
+    margin: 0;
+    padding-bottom: 20px;
+
+    figcaption {
+      margin: 8px 0 0;
+      color: #272727;
+      line-height: 19px;
+      @include text-shadow(#fff 0 1px 0);
+
+      .author {
+        display: block;
+        color: #2f4657;
+      }
+    }
+  }
+  .img {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #a5a5a5;
+    background: #f8f8f8;
+    @include box-shadow(#a5a5a5 0 4px 2px -2px);
+
+    img {
+      display: block;
+      border: 1px solid #a5a5a5;
+    }
+  }
+
+  .b-brought {
+    @include text-shadow(#fff 0 1px 0);
+  }
+}

@@ -1,0 +1,83 @@
+.details-tags {
+  @extend .details-user;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 460px;
+  height: 0;
+  display: block;
+  @include opacity(0);
+  @include transition(all 0.2s);
+
+  .inner {
+    padding: 7px;
+  }
+
+  .control-group {
+    margin: 0;
+  }
+
+  input[type=text] {
+    vertical-align: middle;
+    width: 318px;
+    margin: 0;
+  }
+  .btn-add {
+    height: 30px;
+    margin: 0 0 0 10px;
+    padding: 5px 23px;
+    vertical-align: middle;
+  }
+
+  //Edited
+  .edited & {
+    height: 60px;
+    margin: 43px auto 33px;
+    @include opacity(1);
+  }
+}
+
+.tags-list {
+  overflow: hidden;
+
+  .tag {
+    display: inline-block;
+    height: 35px;
+    margin: 25px 10px 0 0;
+    position: relative;
+    padding: 0 20px;
+    border: 1px solid #191919;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    background: #3f3f3f;
+    @include border-radius(3px);
+    @include nowrap;
+    @include transition(#{background 0.3s, color 0.5s});
+
+    .remove {
+      display: none;
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      color: #3f3f3f;
+      font: normal 16px/16px $P;
+      @include u(false,true);
+    }
+  }
+}
+
+.edited .tags-list .tag {
+  padding: 0 30px 0 10px;
+  background: #fff;
+
+  a {
+    color: #8f8f8f;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .remove {
+    display: block;
+  }
+}

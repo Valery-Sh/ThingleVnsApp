@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <button class="close"></button>
+    <div class="comments">
+        <div class="count">1</div>
+        <div class="icon">w</div>
+    </div>
+    <button class="btn btn-primary edit" data-index="<%= index %>" >Edit Location</button>
+</div>
+<div class="modal-body bg1">
+    <div class="location-info">
+        <div class="img block"><img src="<%= location.author.picture.medium %>" alt="<%= location.author.firstName + " " + location.author.lastName %>"></div>
+        <div class="info">
+            <div class="found"><%= location.author.firstName + " " + location.author.lastName %> found</div>
+            <div class="title"><%= location.name %></div>
+            <div class="location"><%= location.address %></div>
+        </div>
+    </div>
+	<% if (location.notes && location.notes.length > 0) {  %>
+    <div class="message corner-top">
+        <p><%= location.notes %></p>
+    </div>
+	<% } %>
+</div>
+<div class="modal-footer">
+    <a href="javascript:void(0)" class="action-link delete" data-index="<%= index %>" >Delete location</a>
+</div>

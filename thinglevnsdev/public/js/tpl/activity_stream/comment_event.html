@@ -1,0 +1,18 @@
+<div class="message corner-bottom">
+    <p><%= TextHelper.nl2br(comment.get("text")) %></p>
+</div>
+
+<div class="stream-figure">
+    <figure>
+        <div class="img block">
+            <a href="#!things/<%= thing.get("id") %>">
+                <img draggable="false" class="" src="<%= thing.get("pictures")[0].sizes[0].url %>">
+            </a>
+        </div>
+        <figcaption>
+            <a href="#!things/<%= thing.get("id") %>">
+                <%= thing.get("title") %>
+            </a>
+        </figcaption>
+    </figure>
+</div>

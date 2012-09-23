@@ -1,0 +1,42 @@
+#wrapper {
+  overflow-x: hidden;
+  min-width: $default-page-width;
+  // min-height: 100%;
+  // position: relative;
+}
+
+#error {
+    background: none repeat scroll 0 0 #dd1144;
+    border-radius: 10px 10px 10px 10px;
+    bottom: 40px;
+    color: #000;
+    left: 45%;
+    opacity: 0.8;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 200px;
+    z-index: 10000;
+    display: none;
+}
+
+#content {
+  // min-width: $default-page-width;
+  padding: 35px + 59 15px 0 30px;
+  z-index: 1;
+  position: relative;
+  // top: 63px;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // overflow-y: auto;
+
+  // .jspPane {
+  //   padding: 35px 15px 0 30px !important;
+  // }
+}
+
+.scroll-pane {
+  outline: 0;
+  border: 0;
+}

@@ -1,0 +1,12 @@
+.bookmarklet {
+    .bookmarklet-modal {
+        z-index: 1030;
+    }
+
+    .modal:not(.bookmarklet-modal) {
+        &#success-popup,
+        &#thingles-new-popup-2-popup{
+            top: 47% !important;
+        }
+    }
+}

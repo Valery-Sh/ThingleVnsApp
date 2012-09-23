@@ -1,0 +1,43 @@
+<div class="scrollable thingle-scrollable one">
+    <div class="items">
+        <% _.each(thing.get('pictures'), function(picture, index) { %>
+            <% if (!picture.processed) return; %>
+            <% var user = picture.createdUser || thing.get('createdUser'); %>
+            <figure data-id="<%= thing.get('_id') %>" draggable="true" class="item preloader">
+                <div class="img">
+                    <a href="<%= picture.sourceURL || thing.get('sourceURL') || '#' %>"
+                       draggable="false" target="blank">
+                        <img draggable="false" class="" src="<%= thing.getPicture(index, 'large').url %>" data-width="<%= thing.getPicture(index, 'large').width %>" data-height="<%= thing.getPicture(index, 'large').height %>" />
+                    </a>
+                </div>
+                <figcaption>
+                    <div class="tools-panel">
+                        <!-- <a href="javascript:void(0)" class="delete">#</a>
+                        <a href="javascript:void(0)" class="comment">w</a> -->
+                        <a href="javascript:void(0)" class="share" title="Share" data-name="<%= thing.get('title') %>" data-description="<%= thing.get('description') %>" data-img="<%= thing.getPicture(index, 'small').url %>">R</a>
+                        <a href="javascript:void(0)" class="add">+</a>
+                        <a href="javascript:void(0)" class="like">k</a>
+                    </div>
+
+                    <div class="title">
+                        <div class="info">
+                            <a href="#!users/<%= user._id %>"
+                               class="owner avatar"
+                               style="background-image: url(<%= user.picture.small %>)"></a>
+                            <h2>
+                                <a href="#!users/<%= user._id %>">
+                                    <%= user.firstName %> <%= user.lastName %>
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
+        <% }); %>
+    </div>
+
+    <% if (thing.get('pictures').length > 1) { %>
+        <a class="prev"></a>
+        <a class="next"></a>
+    <% } %>
+</div>

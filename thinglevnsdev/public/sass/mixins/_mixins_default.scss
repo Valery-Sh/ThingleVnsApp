@@ -1,0 +1,78 @@
+@mixin ie7-inline($valign: top) {
+  display: inline-block;
+  vertical-align: $valign;
+  .ie7 & {
+    display: inline;
+  }
+}
+
+@mixin placeholder-color($color) {
+  color: $color;
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin moz-dots-remove($border,$outline) {
+  &:active, &:focus {
+    @if ($border == true) {
+      border: none;
+    }
+    @if ($outline == true) {
+      outline: none;
+    }
+  }
+}
+
+@mixin u($line:true,$all:false) {
+  @if ($line) {
+    text-decoration: underline;
+    &:hover {
+      @if ($all) {
+        text-decoration: underline;
+      } @else {
+        text-decoration: none;
+      }
+    }
+  } @else {
+    text-decoration: none;
+    &:hover {
+      @if ($all) {
+        text-decoration: none;
+      } @else {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@mixin _ul($p:0,$m:0) {
+  margin: $p;
+  padding: $m;
+  list-style: none;
+}
+
+@mixin bg($color: #000, $opacity:.75) {
+  @include filter-gradient(rgba($color,$opacity),rgba($color,$opacity));
+  background: rgba($color,$opacity);
+}
+@mixin bg-linear($color1, $color2,$type:top) {
+  $type-num: if($type == top,vertical,0);
+  @include filter-gradient($color1,$color2,$type-num);
+  @include background(linear-gradient($type,$color1,$color2));
+}
+
+@mixin inline-blocks {
+  letter-spacing: -.31em;
+  word-spacing: -.43em;  
+}
+
+@mixin inline-block($valign:top) {
+  vertical-align: $valign;
+  display: inline-block;
+  letter-spacing: normal;
+  word-spacing: normal;
+}

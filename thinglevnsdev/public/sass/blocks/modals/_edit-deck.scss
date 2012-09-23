@@ -1,0 +1,14 @@
+// Edit Deck popup
+#edit-deck-popup {
+  @extend #decks-new-popup;
+
+  .modal-body {
+    padding-bottom: 5px;
+  }
+  .count {
+    text-align: right;
+  }
+  textarea {
+    resize: none;
+  }
+}

@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thingle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" id="viewport"/>
+    <!--[if lt IE 9]>
+    <script src="js/ie9.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/drag_styles.css" media="all">
+</head>
+<body>
+
+<div id="wrapper">
+    <section id="auth" view="auth"></section>
+    <header>
+        <div class="inner">
+            <a href="/" class="logo"></a><a href="#" class="about">About</a>
+            <nav>
+                <ul>
+                    <li class="things-item"><a href="javascript:void(0);">Thingles</a></li>
+                    <li class="people-item"><a href="javascript:void(0);">People you follow</a></li>
+                </ul>
+                <div class="b-search">
+                    <form action="#" method="" id="search-form">
+                        <input type="text" name="search" id="search" class="form-text">
+                        <input type="submit" value="s" class="form-submit">
+                    </form>
+                </div>
+            </nav>
+            <div view="user-controls"></div>
+        </div>
+    </header>
+
+    <aside id="shelf" class="bg1" view="shelf"></aside>
+
+    <div id="content">
+        <section id="main">
+            <div class="static-page policy-page">
+                <a href="#page-builder-popup" data-toggle="modal" style="color:#686867">Page Builder Popup</a>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<div class="subnav about-subnav">
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="legal.html">Legal</a></li>
+    </ul>
+</div>
+
+<div id="categories-menu" class="subnav things-subnav" view="categories-menu">
+    <div class="b-featured-things clr">
+        <h3>Featured Thingles</h3>
+        <h4 class="f-item-title">Food &amp; Drink</h4>
+        <figure>
+            <a href="#" class="img"><img src="tmp/food_drink.jpg" alt="Food &amp; Drink" width="98" height="98"></a>
+            <figcaption><a href="#" class="author">Thomas Kurtz</a>Delicious bites</figcaption>
+        </figure>
+        <div class="b-brought">
+            <div class="brought-label">Brought to you by</div>
+            <div class="brought-logo"><img src="tmp/amelie_emily.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade thingle-modal" id="page-builder-popup">
+    <div class="modal-inner">
+        <div class="modal-header">
+            <button class="close" data-dismiss="modal"></button>
+            <h3>Page Builder</h3>
+        </div>
+        <div class="modal-body">
+            <div class="b-page-builder">
+                <div class="builder-list">
+                    <div class="modal-description">
+                        <p>Select which content sections you want display for this thingle detail page.</p>
+                        <a href="#" class="link">Ok</a>
+                    </div>
+                    <div class="pages">
+                        <div class="select-all">
+                            <div class="checkbox"><input type="checkbox"></div>
+                            <div class="info">
+                                <span class="name">Select all page sections to display</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="page">
+                                <div class="checkbox"><input type="checkbox"></div>
+                                <div class="info">
+                                    <a href="#" class="details">i</a>
+                                    <span class="name">Gallery</span>  
+                                </div>
+                            </li>
+                            <li class="page">
+                                <div class="checkbox"><input type="checkbox"></div>
+                                <div class="info">
+                                    <a href="#" class="details">i</a>
+                                    <span class="name">Store</span>  
+                                </div>
+                            </li>
+                            <li class="page">
+                                <div class="checkbox"><input type="checkbox"></div>
+                                <div class="info">
+                                    <a href="#" class="details">i</a>
+                                    <span class="name">Description</span>  
+                                </div>
+                            </li>
+                            <li class="page">
+                                <div class="checkbox"><input type="checkbox"></div>
+                                <div class="info">
+                                    <a href="#" class="details">i</a>
+                                    <span class="name">Comments</span>  
+                                </div>
+                            </li>
+                            <li class="page">
+                                <div class="checkbox"><input type="checkbox"></div>
+                                <div class="info">
+                                    <a href="#" class="details">i</a>
+                                    <span class="name">The Crowd</span>  
+                                </div>
+                            </li>
+                            <li class="page">
+                                <div class="checkbox"><input type="checkbox"></div>
+                                <div class="info">
+                                    <a href="#" class="details">i</a>
+                                    <span class="name">Map</span>  
+                                </div>
+                            </li>
+                            <li class="page">
+                                <div class="checkbox"><input type="checkbox"></div>
+                                <div class="info">
+                                    <a href="#" class="details">i</a>
+                                    <span class="name">Tags</span>  
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="builder-item-content">
+                    <div class="back-to-list"><a href="#">[</a></div>
+                    <div class="item-header">
+                        <label class="select">select <input type="checkbox"></label>
+                        <div class="name">The Crowd</div>
+                    </div>
+                    <div class="item-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Morbi porta fringilla mi, id faucibus eros fermentum non. Cras aliquam, enim pla cerat ornare ultricies, est erat placerat neque, non pellentesque libero eros in nibh. Phasellus accumsan nisl quis ligula pretium sagittis. Sed vehicula leo sit amet arcu dignissim vulputate. Quisque euismod, massa id semper mollis, ligula arcu auctor metus, vitae placerat justo turpis id urna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8" src="js/lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/json2.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/backbone-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/require.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/bootstrap/bootstrap-transition.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/bootstrap/bootstrap-modal.js"></script>
+<!-- <script type="text/javascript" charset="utf-8" src="js/app.js"></script> -->
+
+<script type="text/javascript">
+    // Code below only for example
+    $('.select-all input[type=checkbox]').click(function(){
+        $('.pages input[type=checkbox]').attr('checked',$(this).is(':checked'))
+    })
+    $('.details, .back-to-list>a').click(function(e){
+        e.preventDefault();
+        $('.builder-list, .builder-item-content').toggle();
+    })
+</script>
+
+</body>
+</html>
+

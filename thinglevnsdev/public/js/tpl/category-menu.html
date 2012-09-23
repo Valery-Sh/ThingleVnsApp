@@ -1,0 +1,13 @@
+<% var column_size = Math.ceil(categories.length / 2) %>
+
+<ul class="col">
+    <% for(var i = 0; i < column_size; ++i) { %>
+        <li><a href="#!categories/<%= encodeURIComponent(categories[i].get('name')) %>" title="Discover <%= categories[i].get('name') %>"><%= categories[i].get('name') %></a></li>
+    <% } %>
+</ul>
+
+<ul class="col">
+    <% for(var i = column_size; i < categories.length; ++i) { %>
+        <li><a href="#!categories/<%= encodeURIComponent(categories[i].get('name')) %>" title="Discover <%= categories[i].get('name') %>"><%= categories[i].get('name') %></a></li>
+    <% } %>
+</ul>

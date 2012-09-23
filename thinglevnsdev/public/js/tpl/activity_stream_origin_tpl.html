@@ -1,0 +1,45 @@
+<div class="b-activity-stream">
+    <aside class="notifications block">
+        <div class="block-title">
+            <h3><a href="javascript:void(0);" class="notifications-panel-toggle" onclick="alert('CLICKED')">configure notifications</a></h3>
+            <!--h3><a href="#sett" class="notifications-panel-toggle">configure notifications</a></h3-->            
+        </div>
+
+        <div class="block-inner">
+            <div class="scrollable">
+                <div class="items">
+                    <div>
+                        <ul>
+                            <% var inc = 0; %>
+                            <% _.each(models, function(n) { %>
+                                <%
+                                if (inc >= 9) {
+                                    inc = 0;
+                                    %>
+                                        </ul></div><div><ul>
+                                    <%
+                                }
+                                inc++;
+                                %>
+                                <li class="notification" data-id="<%= n.get("_id") %>">
+                                    <div>
+                                        <a href="#!users/<%= n.get("sender")._id %>" class="avatar" style="background-image:url('<%= n.get("sender").picture.small %>')"></a>
+                                        <span class="info">
+                                            <span><%= n.get("text") %></span>
+                                        </span>
+                                        <span class="date"><%= DateHelper.format(n.get("createdAt"), "%J") %></span>
+                                    </div>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <a class="prev"></a>
+                <a class="next"></a>
+                <div class="navi"></div>
+            </div>
+        </div>
+    </aside>
+
+    <section id="notification-content" class="stream block bg1" style="display: none;"></section>
+</div>

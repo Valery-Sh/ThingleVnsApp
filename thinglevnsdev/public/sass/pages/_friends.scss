@@ -1,0 +1,110 @@
+/*--- Friends email ---*/
+.mingle-page {
+  h1 {
+    padding-left: 45px;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 23px;
+      height: 29px;
+      position: absolute;
+      top: 3px;
+      left: 6px;
+      background: sprite($sprite,email-book) no-repeat;
+    }
+  }
+
+  // Modification on Bootstrap default CSS
+  .nav-list > li > a { margin: 0;}
+
+  .page-content {
+    h2 .btn-group {
+      float: right;
+      margin-right: 1em;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    .typefilter { vertical-align: middle; margin-left:1em;}
+
+    .float-right{
+      float: right;
+    }
+
+    .float-left{
+      float: left;
+    }
+
+    .wid45per{
+      width: 45%;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 100%;
+
+      li.user {
+        overflow: hidden;
+        padding: 10px 0 10px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #333;
+        margin-right: 1em;
+
+        .img {
+          float: left;
+          display: block;
+          width: 34px;
+          height: 34px;
+          border: 1px solid #3b3b3b;
+          @include box-shadow(rgba(#000,.58) 1px 1px 10px);
+        }
+        .username {
+          margin: 0 0 0 15px;
+          line-height: 33px;
+          overflow: hidden;
+          @include ellipsis;
+        }
+        .invite {
+          float: right;
+        }
+
+        .btn {
+          height: 34px;
+          padding: 9px 24px;
+          float: right;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        .more {
+          .btn {
+            display: block;
+          }
+        }
+
+        .link-profile {
+          color: #2D2D2D;
+          &:hover {
+            cursor: default;
+            text-decoration: none;
+          }
+          &.invited:hover {
+            color: #178BC7;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+/*--- end Friends email ---*/

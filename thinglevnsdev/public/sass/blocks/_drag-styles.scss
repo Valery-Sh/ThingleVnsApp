@@ -1,0 +1,89 @@
+#dragproxy {
+  overflow: hidden;
+  width: 122px;
+  height: 122px;
+  padding: 10px;
+  position: relative;
+  border: 1px solid #6d6d6d;
+  background: #fff;
+  @include box-shadow(rgba(#000, .33) 0 3px 6px);
+
+  .thing-drag-proxy {
+    overflow: hidden;
+    vertical-align: middle;
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 0;
+    line-height: 1;
+    text-align: center;
+
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      width: 200px;
+      position: relative;
+      left: -50%;
+      top: -50%;
+      border: 1px solid #4a4a4a;
+      text-align: center;
+    }
+  }
+}
+
+body.dragging-thing #shelf {
+  .b-deck .inner ul li {
+    .img {
+      overflow: hidden;
+      display: inline-block;
+      width: 122px;
+      height: 122px;
+      padding: 10px;
+      position: relative;
+      border: 1px solid #6D6D6D;
+      background: #fff;
+      @include box-shadow(rgba(82, 168, 236, .6) 0 3px 8px);
+    }
+
+    &.deck-drop-hover .img {
+      overflow: hidden;
+      display: inline-block;
+      width: 122px;
+      height: 122px;
+      padding: 10px;
+      position: relative;
+      border: 1px solid #6D6D6D;
+      background: transparent image-url("dnd-upload.png") center no-repeat;
+      @include box-shadow(rgba(82, 168, 236, .6) 0 3px 8px);
+
+      img {
+        opacity: 0;
+      }
+    }
+  }
+  .drag-new-deck a,
+  .drop-zone{
+    @include box-shadow(rgba(82, 168, 236, .6) 0 3px 8px);
+
+    &.deck-drop-hover {
+      @include box-shadow(rgba(82, 168, 82, .6) 0 3px 8px);
+    }
+  }
+}
+
+// Shelf Styles
+.deck-item .item {
+    height: 100px;
+    width: 100px;
+    line-height: 97px;
+}
+
+#shelf #deck-list > .deck-item .img img {
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    position: relative;
+}

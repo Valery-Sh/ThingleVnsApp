@@ -1,0 +1,137 @@
+$bd-color: #7a7a7a;
+
+.b-page-builder {
+  .builder-list {
+    .checkbox {
+      float: left;
+      width: 50px;
+      height: 43px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      line-height: 41px;
+
+      input {
+        vertical-align: middle;
+        float: none;
+        margin-left: 0;
+      }
+    }
+    .pages {
+      overflow: hidden;
+    }
+    .select-all {
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid $bd-color;
+      background: #e2e1e1;
+      @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 7px);
+    }
+    .info {
+      overflow: hidden;
+      margin-left: 60px;
+      height: 43px;
+    }
+    .name {
+      display: block;
+      height: 43px;
+      line-height: 43px;
+      @include nowrap;
+      @include ellipsis;
+    }
+    ul {
+      @include _ul;
+      overflow-y: auto;
+      max-height: 307px;
+    }
+
+    .page {
+      overflow: hidden;
+      border-top: 1px solid $bd-color;
+      background: #f8f8f8;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      .checkbox {
+        border-right: 1px solid $bd-color;
+        background: #f0f0f0;
+      }
+      .name {
+        margin-right: 87px;
+      }
+      .details {
+        float: right;
+        width: 22px;
+        margin-right: 60px - 22;
+        color: #d4d4d4;
+        font: normal 24px/43px $P;
+        @include u(false,true);
+        @include transition(color 0.2s);
+
+        &:hover {
+          color: $default-font-color;
+        }
+      }
+    }
+  }
+
+  .builder-item-content {
+    display: none;
+    background: #f8f8f8;
+    
+    .back-to-list {
+      height: 43px;
+      padding: 0 0 0 25px;
+      position: relative;
+      background: #e2e1e1;
+      border-bottom: 1px solid $bd-color;
+      @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 7px);
+
+      a {
+        color: $default-font-color;
+        font: normal 14px/44px $P;
+        @include u(false,true);
+        @include transition(color 0.2s);
+
+        &:hover {
+          color: #181818;
+        }
+      }
+    }
+
+    .item-header {
+      overflow: hidden;
+      padding: 25px 25px 20px;
+
+      .name {
+        margin-right: 70px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .select {
+        float: right;
+        font-size: 12px;
+        font-style: italic;
+
+        input {
+          margin-left: 7px;
+          display: inline;
+        }
+      }
+    }
+    .item-content {
+      padding: 0 25px 25px 25px;
+      text-align: justify;
+
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 22px;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+    }
+  }
+}

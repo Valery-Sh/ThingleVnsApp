@@ -1,0 +1,20 @@
+<h2><span><%= title %></span></h2>
+<div class="editors">
+    <div class="scroll-pane horizontal">
+        <ul class="list-names">
+            <% _.each(editions, function(edition) { %>
+                <% var author = users[edition.author]; %>
+                <li class="<%= curatorId == edition.author ? 'curator' : '' %>">
+                    <% if (edition.revision) { %>
+                        <a href="javascript:void(0);" class="revert" data-revision="<%= edition.revision %>">revert to this edit</a>
+                    <% } %>
+                    <a href="#!users/<%= author.get("_id") %>" class="img"><span class="avatar" style="background-image:url(<%= author.get("picture").medium %>);"></span></a>
+                    <div class="info">
+                        <div class="username"><a href="#!users/<%= author.get("_id") %>"><%= author.get("firstName") %> <%= author.get("lastName") %></a></div>
+                        <div class="date"><%= DateHelper.format(edition.createdAt) %></div>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>

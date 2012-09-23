@@ -1,0 +1,14 @@
+<% _.each(decks, function(deck) { %>
+<li data-id="<%= deck.get('_id') %>" class="deck-item">
+    <figure class="carousel slide">
+        <a href="#" class="img">
+            <div class="carousel-inner">
+                <div class="cover item active">
+                    <img src="<%= deck.get('coverURL') || 'images/default-shelf-collection.png' %>" alt="Drag-n-drop onto a Collection to add an item" title="Drag-n-drop onto a Collection to add an item">
+                </div>
+            </div>
+        </a>
+        <figcaption><a href="#"><%= deck.get("name") %></a></figcaption>
+    </figure>
+</li>
+<% }); %>

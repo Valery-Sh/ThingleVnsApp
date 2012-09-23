@@ -1,0 +1,144 @@
+/*--- Deck ---*/
+#decks-list {
+  @extend #things-list;
+
+  .profile-container {
+    margin: 35px 18px 0 0;
+  }
+}
+#content {
+
+  .deck {
+    margin-top: 35px;
+    margin-right: 18px;
+
+    .img {
+      overflow: hidden;
+      width: 220px;
+      height: 220px;
+      margin: 0;
+      text-align: center;
+
+      // &:after {
+      //   content: "";
+      //   display: inline-block;
+      //   vertical-align: middle;
+      //   width: 0;
+      //   height: 220px;
+      //   font-size: 0;
+      // }
+
+      .deck-name {
+        display: block;
+        height: 35px;
+        padding: 0 25px 0 1px;
+        position: absolute;
+        top: -35px;
+        left: 0;
+        right: 0;
+        color: #2d2d2d;
+        font-size: 20px;
+        text-align: left;
+        @include ellipsis;
+        @include single-transition(color,0.2s);
+      }
+
+      // img {
+      //   display: inline-block;
+      //   vertical-align: middle;
+      //   margin-right: -3px;
+      //   @include opacity(.95);
+      //   @include single-transition(opacity,0.5s);
+      //   max-width: 220px;
+      //   max-height: 220px;
+
+      //   &:hover {
+      //     @include opacity(1);
+      //   }
+      // }
+
+      &:hover {
+        .deck-name {
+          color: #178bc7;
+        }
+      }
+    }
+
+    figcaption {
+      position: static;
+      height: auto;
+      padding: 9px;
+
+      ul {
+        overflow: hidden;
+        width: 202px;
+        height: 48px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 0 0 15px;
+          list-style: none;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          a {
+            overflow: hidden;
+            display: block;
+            width: 48px;
+            height: 48px;
+            border: 1px solid #535252;
+            text-align: center;
+            font-size: 0;
+
+            // &:after {
+            //   content: "";
+            //   display: inline-block;
+            //   vertical-align: middle;
+            //   width: 0;
+            //   height: 48px;
+            //   font-size: 0;
+            // }
+
+            // img {
+            //   max-width: 48px;
+            //   max-height: 48px;
+            //   margin-right: -2px;
+            // }
+
+            &:hover {
+              border-color: #178bc7;
+            }
+          }
+        }
+      }
+    }
+
+    .delete-deck {
+      z-index:2;
+      display: block;
+      position:absolute;
+      top:-35px;
+      right: 0px;
+      color: #2d2d2d;
+      font: normal 24px $P;
+      @include opacity(0);
+      @include transition(all 0.2s);
+
+      &:hover{
+        color: #178BC7;
+      }
+    }
+
+    &:hover .delete-deck {
+      display: block;
+      @include opacity(1);
+    }
+  }
+}
+/*--- End Deck ---*/

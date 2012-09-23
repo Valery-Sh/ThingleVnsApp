@@ -1,0 +1,44 @@
+$use-mozilla-ellipsis-binding: false;
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$experimental-support-for-khtml: false;
+
+$default-page-width: 1000px;
+//$default-page-height: 768px;
+$content-width: 960px;
+$header-height: 63px;
+$details-nav-height: 77px;
+
+$default-body-bg: #ecebeb;
+
+//Link
+$default-link-color: #fff;
+$default-link-underline: false;
+
+//Font
+$P: Pictos;
+$default-font-family: Asap, "Trebuchet MS", Tahoma, Arial, FreeSans, sans-serif;
+$default-font-size: 14px;
+$default-font-color: #686867;
+
+$default-inputs-font-family: $default-font-family;
+
+//CSS3Pie
+//$pie-behavior: url("js/PIE.htc");
+
+//Sprite options
+//$sprite-layout:smart; //vertical horizontal diagonal smart
+//$ico-sprite-dimensions: true;
+// $sprite-spacing: 5px;
+// $sprite-repeat: no-repeat;
+// $sprite-sprite-dimensions: true;
+//$sprite-sprite-base-class: ".sprite-icon";
+//$sprite-icon6-spacing: 35px;
+//@import "sprite/*.png";
+//$sprite: $sprite-sprites;
+$sprite: sprite-map("sprite/*.png",
+  $position: 0%, $spacing: 10px, $repeat: no-repeat,
+  $sprite-select-arrow-spacing: 30px,
+  $sprite-status1-spacing: 60px,
+  $sprite-status2-spacing: 60px
+);

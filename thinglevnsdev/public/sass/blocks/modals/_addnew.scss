@@ -1,0 +1,44 @@
+// Begin Popup
+#addnew-popup {
+  width: 551px;
+
+  .modal-body {
+    padding: 0;
+
+    > aside {
+      text-align: center;
+      float: left;
+      width: 274px;
+
+      a {
+        display: block;
+        padding: 31px 0 25px;
+        color: #686867;
+        font-size: 18px;
+        @include u(false,true);
+
+        &:before {
+          content: "";
+          display: block;
+          margin: 0 auto 20px;
+          height: 161px;
+        }
+      }
+    }
+  }
+  aside.new-thing {
+    border-right: 1px solid #7a7a7a;
+    padding-right: 1px;
+
+    a:before {
+      width: 154px;
+      background: sprite($sprite,new-thing) no-repeat;
+    }
+  }
+  aside.new-deck {
+    a:before {
+      width: 195px;
+      background: sprite($sprite,new-deck) no-repeat;
+    } 
+  } 
+}

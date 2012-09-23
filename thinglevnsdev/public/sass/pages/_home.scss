@@ -1,0 +1,55 @@
+/*--- Home ---*/
+
+@import "blocks/items";
+@import "blocks/profile-item";
+@import "blocks/shelf";
+@import "blocks/plugins/scrollpane";
+@import "blocks/login-popup";
+
+#things-title {
+  // height: 82px;
+  // position: absolute;
+  // top: 56px;
+  // right: 0;
+  // left: 30px + 20 ; // #content padding-left + .profile-item margin-right
+  // margin: 35px 15px 20px 30px;
+  margin: -35px -15px -30px -30px;
+  padding: 20px 15px 50px 30px;
+  background: #e3e2e2;
+  border-bottom: 1px solid #d2d1d1;
+  @include text-shadow(#fff 0 1px 0);
+
+  h1 {
+    color: #4e4e4e;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: italic;
+    @include force-wrap;
+  }
+
+  h2 {
+    color: #888;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .things-panel {
+    display: block;
+    padding-top: 10px;
+    color: #5a5a5a;
+    font-size: 18px;
+
+    span {
+      margin-right: 24px;
+    }
+  }
+
+  ~ .scroll-pane {
+    .jspPane {
+      padding-top: 0 !important;
+    }
+  }
+}
+
+/*--- End Home ---*/

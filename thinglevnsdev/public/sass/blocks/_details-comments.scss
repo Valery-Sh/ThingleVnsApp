@@ -1,0 +1,181 @@
+.details-comments {
+  position: relative;
+  text-align: center;
+
+  .comments-nav {
+    overflow: hidden;
+    // float: left;
+    // padding: 10px 0 0 20px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+
+    > a {
+      float: left;
+      display: block;
+      width: 42px;
+      height: 42px;
+      background: sprite($sprite,comment-prev) no-repeat;
+      @include opacity(.85);
+      @include transition(opacity 0.2s);
+
+      &:hover {
+        @include opacity(1);
+      }
+      &.disabled {
+        @include opacity(0.1);
+      }
+    }
+    .next {
+      margin: 0 0 0 37px;
+      background: sprite($sprite,comment-next) no-repeat;
+    }
+  }
+
+  .comment-new {
+    display: inline-block;
+    margin: 0 auto -61px;
+    position: relative;
+    border: 3px solid #e0e0e1;
+    text-align: left;
+    @include border-radius(3px);
+
+    .inner {
+      z-index: 2;
+      overflow: hidden;
+      height: 142px;
+      position: relative;
+      padding: 7px;
+      border: 1px solid #a0a0a0;
+      @include transition(all 0.3s);
+
+      .img {
+        float: left;
+        padding: 5px;
+        border: 1px solid #6d6d6d;
+        background: #e2e1e1;
+
+        span {
+          display: block;
+          width: 40px;
+          height: 40px;
+          border: 1px solid #414141;
+        }
+      }
+
+      .control-group {
+        float: left;
+        margin: 0 0 0 7px;
+
+        textarea {
+          width: 510px;
+          height: 82px;
+          margin: 0;
+          resize: none;
+          @include transition(#{height 0.3s, width 0.3s});
+        }
+      }
+
+      .btn-primary {
+        padding: 10px 40px;
+        position: absolute;
+        top: 96px;
+        right: 7px;
+      }
+    }
+
+    // Close
+    a.close {
+      z-index: 1;
+      display: block;
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      top: 0;
+      right: -92px;
+      background: sprite($sprite,comment-close) no-repeat;
+      @include opacity(.85);
+      @include transition(all 0.3s);
+
+      &:hover {
+        @include opacity(1);
+      }
+    }
+
+    // Collapsed
+    &.collapsed {
+      .inner {
+        height: 68px;
+      }
+      .control-group {
+        textarea {
+          width: 370px;
+          height: 52px;
+          padding: 15px 0 0 10px;
+        }
+      }
+
+      a.close {
+        right: 0;
+        @include opacity(0);
+      }
+    }
+  }
+
+  .comments {
+    overflow: hidden;
+    clear: both;
+    list-style: none;
+    margin: 74px 0 0 -35px;
+    padding: 30px 0 0;
+    text-align: left;
+
+    .items {
+      position: relative;
+
+      > div {
+        float: left;
+      }
+
+      .comment {
+        float: left;
+        position: relative;
+        padding: 0 0 0 80px;
+        margin: 0 0 0 35px;
+        width: 445px;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 60px;
+          height: 43px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: sprite($sprite,comment-q) no-repeat;
+        }
+
+        .username {
+          margin: 0 0 10px;
+          a {
+            font-size: 16px;
+            font-weight: bold;
+            color: #111;
+            @include transition(color 0.2s);
+
+            &:hover {
+              color: #2a80c5;
+              text-decoration: none;
+            }
+          }
+        }
+
+        .date {
+          color: #545454;
+          font-style: italic;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

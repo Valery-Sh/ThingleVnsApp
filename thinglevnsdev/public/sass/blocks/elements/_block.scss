@@ -1,0 +1,8 @@
+.block {
+  position: relative;
+  border: 1px solid #6d6d6d;
+  @include box-shadow(rgba(#000,.46) 0 2px 6px);
+}
+.block-title {
+  background: #2d2d2d;
+}

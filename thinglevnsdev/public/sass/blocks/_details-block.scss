@@ -1,0 +1,49 @@
+.details-block {
+  margin: 45px 0 55px;
+  position: relative;
+  color: #2d2d2d;
+  text-align: left;
+
+  h2 {
+    height: 1px;
+    margin: 0 0 30px;
+    position: relative;
+    background: #3f3f3f;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      min-width: 150px + 18*2;
+      margin: 0;
+      padding: 0 18px;
+      position: relative;
+      top: -20px;
+      background: #ECEBEB;
+      font-size: 30px;
+    }
+  }
+
+  a.details-edit {  
+    position: absolute;
+    right: -1px;
+    top: -18px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #111;
+
+    &.description {
+      color: #545454;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      font-style: italic;
+    }
+
+    + p {
+      margin-top: 10px;
+    }
+  }
+}

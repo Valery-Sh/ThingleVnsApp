@@ -1,0 +1,35 @@
+.b-try {
+  overflow: hidden;
+  width: 220px;
+  margin: 0;
+  padding: 24px 19px 12px;
+  border-bottom: 1px solid #7a7a7a;
+  background: #2d2d2d;
+  // @include box-shadow(rgba(#7a7a7a,.44) 0 2px 4px);
+  @include nowrap;
+
+  h2 {
+    margin: 0 0 15px;
+    padding: 0 0 10px;
+    color: #6a6a6a;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid #000;
+    @include text-shadow(rgba(#000,.42) 0 -1px 0);
+    @include box-shadow(#484848 0 1px 0);
+  }
+  
+  .description {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 9px;
+    color: #fff;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  #bookmarklet-button:hover {
+    @include box-shadow(none);
+  }
+}

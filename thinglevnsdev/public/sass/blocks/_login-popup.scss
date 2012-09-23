@@ -1,0 +1,57 @@
+#login-popup {
+  width: 609px;
+  margin-left: -305px;
+  padding: 24px 27px;
+  border-color: #838384;
+  background: #cecfd0;
+  @include border-radius(4px);
+  z-index: 2000;
+
+  .modal-inner {
+    width: 549px;
+    border: 1px solid #767676;
+    @include border-radius(2px);
+    @include box-shadow(#{rgba(#000,.29) 0 2px 4px,inset #fff 0 0 0 2px});
+  }
+  .modal-header {
+    padding: 35px 0 20px;
+    height: 83px;
+    @include nowrap;
+
+    h3 {
+      float: left;
+      display: block;
+      width: 155px;
+      color: #404041;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      float: left;
+      display: block;
+      width: 196px;
+      height: 1px;
+      margin: 15px 0 0;
+      border-bottom: 1px solid #fff;
+      background: #606061;
+      font-size: 0;
+    }
+  }
+  .modal-body {
+    clear: both;
+    text-align: center;
+    padding-bottom: 40px;
+
+    .but-facebook {
+      display: inline-block;
+      width: 198px;
+      height: 37px;
+      background: sprite($sprite,but-facebook) no-repeat;
+    }
+  }
+}

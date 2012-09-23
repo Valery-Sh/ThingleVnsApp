@@ -1,0 +1,83 @@
+<div class="modal-inner">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal"></button>
+        <h3>Create a Thingle</h3>
+    </div>
+    <div class="modal-body">
+        <div class="modal-top tab-main">
+            <div class="modal-top-inner">
+                <a id="link-change-image" href="#" class="select-diff-image">Select a different image</a>
+
+                <div class="img"></div>
+                <div class="info">
+                    <div class="control-group">
+                        <select name="deck" class="with-add-line required">
+                            <option value="" selected="selected">Choose a Collection</option>
+                            <% _.each(decks, function(deck) {%>
+                                <% var selected = selectedDeckId == deck.get("_id") ? "selected" : "" %>
+                                <option value="<%= deck.get('_id') %>" <%= selected %> ><%= deck.get("name") %></option>
+                            <%}); %>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Title</label>
+                        <input name="title" class="required" type="text">
+                    </div>
+                    <div class="control-group">
+                        <label>Tags (comma separated values)</label>
+                        <input name="tags" type="text">
+                    </div>
+                    <div class="control-group">
+                        <label>Description</label>
+                        <textarea cols="30" rows="10" name="description"></textarea>
+                    </div>
+                    <div class="control-group">
+                        <label for="post-facebook" class="checkbox inline">
+                            <input type="checkbox" name="share" id="post-facebook" checked="checked"/>Post to Facebook
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="toggle-options">Open Options</a>
+        </div>
+        <div class="modal-bottom tab-options">
+            <div class="modal-bottom-inner">
+                <div class="form-horizontal">
+                    <div class="control-group">
+                        <div class="controls">
+                            <!-- <button class="btn attach-files" disabled>Attach Files</button>
+                                                      <span class="or">or</span> -->
+                            <button class="btn add-link">Find photos from web</button>
+                        </div>
+                    </div>
+                    <div class="control-group add-link-field">
+                        <form class="add-link-form" onsubmit="return false;">
+                            <input type="url" class="span5" placeholder="http://" name="link" />
+                            <input type="submit" class="btn btn-success" value="Find" />
+                        </form>
+                    </div>
+                </div>
+                <div class="scroll-pane">
+                    <ul class="attached-files">
+                    </ul>
+                </div>
+                <div class="form-horizontal">
+                    <div class="control-group add-tags">
+                        <label class="control-label">Add tags</label>
+
+                        <div class="controls">
+                            <form class="add-tag-form" onsubmit="return false;">
+                                <input type="text" name="add-tag" />
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="attached-count"><strong>0</strong> item<span class="plural-s">s</span> attached</div>
+        <button type="submit" class="btn btn-primary btn-submit">Create a Thingle</button>
+    </div>
+</div>

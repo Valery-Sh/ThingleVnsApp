@@ -1,0 +1,45 @@
+.message {
+  padding: 15px 30px 20px 142px;
+  position: relative;
+  border-bottom: 1px solid #0f6db8;
+  color: #fff;
+  min-height: 115px;
+  background: #4d8cbf url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAxCAYAAABnCd/9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM2OUQ2RkZERjJCNDExRTE4QzA4RkQzQzU2QUExNEM5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM2OUQ2RkZFRjJCNDExRTE4QzA4RkQzQzU2QUExNEM5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzY5RDZGRkJGMkI0MTFFMThDMDhGRDNDNTZBQTE0QzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzY5RDZGRkNGMkI0MTFFMThDMDhGRDNDNTZBQTE0QzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz79LRu/AAAGh0lEQVR42sxbD0xVZRS/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") no-repeat 35px 38px;
+  @include box-shadow(rgba(#000,.29) 0 2px 2px);
+
+  p {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
+    font-style: italic !important;
+  }
+
+  &.corner-bottom {
+    &:after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 21px;
+      margin: 0 0 0 -20px;
+      position: absolute;
+      left: 50%;
+      bottom: -21px;
+      background: sprite($sprite,blue-down-arrow) no-repeat;
+    }
+  }
+  &.corner-top {
+    &:after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 18px;
+      margin: 0;
+      position: absolute;
+      left: 30px;
+      top: -17px;
+      background: sprite($sprite,blue-up-arrow) no-repeat;
+    }
+  }
+
+}

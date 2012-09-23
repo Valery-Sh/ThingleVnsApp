@@ -1,0 +1,51 @@
+<div class="image">
+    <form action="<%= params.get('action') %>" method="post" enctype="multipart/form-data" id="s3-upload">
+        <input type="hidden" name="key" value="<%= params.get('folder') %>/${filename}">
+        <input type="hidden" name="AWSAccessKeyId" value="<%= params.get('AWSAccessKeyId') %>">
+        <input type="hidden" name="acl" value="<%= params.get('acl') %>">
+        <input type="hidden" name="success_action_redirect" value="<%= params.get('success_action_redirect') %>">
+        <input type="hidden" name="policy" value="<%- params.get('policy') %>">
+        <input type="hidden" name="signature" value="<%= params.get('signature') %>">
+        <input type="hidden" name="Content-Type" value="image/jpeg">
+        <!-- Include any additional input fields here -->
+
+        Upload image:
+        <input name="file" type="file">
+    </form>
+    <br/>
+    <a href="javascript:void(0)" class="upload-btn">Upload</a>
+
+</div>
+
+<div class="thing" style="display: none;">
+    <form id="thing-form">
+        <p>
+            Thingle title:
+            <input type="text" name="title"/>
+        </p>
+
+        <p>
+            Thingle description: <br/>
+            <textarea name="description"></textarea>
+        </p>
+
+
+        <p>
+            Collection: <br/>
+            <select name="deck"></select>
+        </p>
+
+        <p>
+            New Collection: <br/>
+            <input type="text" name="deck_name"/>
+            <a class="create-deck-btn" href="javascript:void(0)">Create</a>
+        </p>
+
+        <p>
+            Tags (comma separated values): <br/>
+            <input type="text" name="tags"/>
+        </p>
+    </form>
+
+    <a href="javascript:void(0)" class="submit-btn">Save</a>
+</div>

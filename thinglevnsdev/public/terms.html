@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thingle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" id="viewport"/>
+    <!--[if lt IE 9]>
+    <script src="js/ie9.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/drag_styles.css" media="all">
+</head>
+<body>
+
+<div id="wrapper">
+    <section id="auth" view="auth"></section>
+    <header>
+        <div class="inner">
+            <a href="/" class="logo"></a><a href="#" class="about">About</a>
+            <nav>
+                <ul>
+                    <li class="things-item"><a href="javascript:void(0);">Thingles</a></li>
+                    <li class="people-item"><a href="javascript:void(0);">People you follow</a></li>
+                </ul>
+                <div class="b-search">
+                    <form action="#" method="" id="search-form">
+                        <input type="text" name="search" id="search" class="form-text">
+                        <input type="submit" value="s" class="form-submit">
+                    </form>
+                </div>
+            </nav>
+            <div view="user-controls"></div>
+        </div>
+    </header>
+
+    <aside id="shelf" class="bg1" view="shelf"></aside>
+
+    <div id="content">
+        <section id="main">
+            <div class="static-page terms-page">
+                <h1>Terms of Use</h1>
+                <aside class="static-leftside">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Use of Services</a></li>
+                            <li class="active"><a href="#">Spam and Abuse</a></li>
+                            <li><a href="#">Limitation of Liability</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <section class="static-content">
+                    <h2>Spam and Abuse</h2>
+                    <p>Thingle strives to protect its users from spam and abuse.</p>
+                    <p>Technical abuse and user abuse is not tolerated on thingle.com, and will result in permanent suspension. Any accounts engaging in the activities specified below are subject to permanent suspension.</p>
+                    <p><b>Invitation spam:</b> You may not use Thingle services to contact import nor send repeat or mass invitations.</p>
+                    <p><b>Malware/Phishing:</b> You may not publish or link to malicious content intended to damage or disrupt another user's browser or computer or to compromise a user's privacy. Selling user names: Unless you have been specifically permitted to do so in a separate agreement with Thingle, you agree that you will not reproduce, duplicate, copy, sell, trade or resell the Services for any purpose, where "Services" is defined as follows: Your use of Thingle's products, services and web sites (referred to collectively as the "Services" in this document and excluding any services provided to you by Thingle under a separate written agreement) is subject to the terms of a legal agreement between you and Thingle . </p>
+                    <p><b>Serial Accounts:</b> You may not create serial accounts for disruptive or abusive purposes, or with overlapping use cases. Mass account creation may result in suspension of all related accounts. Please note that any violation of the Thingle Rules is cause for permanent suspension of all accounts.</p>
+                    <p><b>Spam:</b> You may not use the Thingle service for the purpose of spamming anyone. What constitutes "spamming" will evolve as we respond to new tricks and tactics by spammers.</p>
+                    <p><b>Username Squatting:</b> You may not engage in username squatting. Accounts that are inactive for more than 6 months may also be removed without further notice. Some of the factors that we take into account when determining what conduct is considered to be username squatting are the number of accounts created or creating accounts for the purpose of selling those accounts.</p>
+                    <p><b><i>Important Note:</i> Accounts engaging in any of these behaviors may be investigated for abuse. Accounts under investigation may be removed. Thingle reserves the right to immediately terminate your account without further notice in the event that, in its judgment, you violate these Rules or the Terms of Service.</b></p>
+                </section>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<div class="subnav about-subnav">
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="legal.html">Legal</a></li>
+    </ul>
+</div>
+
+<div id="categories-menu" class="subnav things-subnav" view="categories-menu">
+    <div class="b-featured-things clr">
+        <h3>Featured Thingles</h3>
+        <h4 class="f-item-title">Food &amp; Drink</h4>
+        <figure>
+            <a href="#" class="img"><img src="tmp/food_drink.jpg" alt="Food &amp; Drink" width="98" height="98"></a>
+            <figcaption><a href="#" class="author">Thomas Kurtz</a>Delicious bites</figcaption>
+        </figure>
+        <div class="b-brought">
+            <div class="brought-label">Brought to you by</div>
+            <div class="brought-logo"><img src="tmp/amelie_emily.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8" src="js/lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/json2.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/backbone-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/require.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+<div class="hide" id="dragproxy"></div>
+</body>
+</html>
+

@@ -1,0 +1,127 @@
+/*--- Profile Item ---*/
+.profile-container {
+  display: inline-block;
+}
+
+.profile-item {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 0 30px 0;
+  border: 1px solid #6d6d6d;
+  @include box-shadow(rgba(#000,.46) 0 2px 6px);
+
+  .username {
+    height: auto;
+    min-width: 220px;
+    position: static;
+    padding: 10px 11px 10px 14px;
+    border: 0;
+    background: #2d2d2d;
+    font-size: 22px;
+    line-height: 24px;
+    color: #efefef;
+
+    .facebook {
+      float: right;
+      width: 25px;
+      height: 25px;
+      margin: 11px 0 0 10px;
+      background: sprite($sprite,facebook) no-repeat;
+    }
+
+    a {
+      text-decoration: none;
+    }     
+  }
+
+  .profile-item-inner {
+    overflow: hidden;
+    min-height: 219px;
+    padding: 13px 13px 11px;
+    @extend .bg1;
+  }
+  .profile-item-left {
+    float: left;
+
+    .profile-userpic {
+      overflow: hidden;
+      width: 96px;
+      border: 1px solid #424242;
+      @include box-shadow(rgba(#000,.58) 1px 1px 10px);
+
+      img {
+        width: 96px;
+        display: block;
+      }
+    }
+
+    .btn {
+      margin: 18px 0 0;
+      padding: 10px 12px;
+    }
+
+    .follow {
+      display: block;
+      width: 104px;
+      height: 48px;
+      margin: 15px -4px -5px;
+      background: sprite($sprite,follow-profile) no-repeat;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 46px;
+      @include u(false,true);
+    }
+  }
+  .profile-item-right {
+    margin-left: 112px;
+
+    dl {
+      margin: 0;
+      color: #303030;
+      @include text-shadow(#fff 0 1px 0);
+
+      dt {
+        font-weight: bold;
+        font-size: 15px;
+        margin: 0 0 2px;
+        @include nowrap;
+
+        &.hover {
+          color: #178bc7;
+        }
+      }
+      dd {
+        font-size: 18px;
+        margin: 0 0 6px;
+        @include nowrap;
+
+        a {
+          color: #303030;
+          @include u(false,true);
+        }
+      }
+    }
+  }
+
+  // .profile-bottom {
+  //   display: block;
+  //   height: 24px;
+  //   position: absolute;
+  //   left: -3px;
+  //   right: 0;
+  //   bottom: -7px;
+
+  //   &:before {
+  //     content: "";
+  //     display: block;
+  //     width: 100%;
+  //     height: 24px;
+  //     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO0AAAAYCAYAAAAWEnolAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABXJJREFUeNrsm11LK0kQhsdvxY+D194KgqKY//8DvAoIgUAkEhACgSzRaDQancy+T9s123r0cNzFzYRTL4Sp6emedJJ5uqqrOwutVqvIos7OzrK9vb1saWkpK4qisbGxMZlOp52FhYXB1tZWhq3ywdraWra4uHil836e5zTtHh8f9zKXy/XtWri8vCxeXl7CSafTye7v78uLj4+P4ShQM6uDNjc3S1tgh+srKyvZ+vp6AFhA92J5T2VdIFf73urqavfh4SHTeV8Dw9VkMmGAGBwcHHT8p3C5fhPabrdbjEaj324AoNfX16V9e3tb2gBp9tPT00/Ay2MHyBHePHrsUL69vU29gV6d3d1d7OHy8nKb63oNVadNW3n3ke7Z0pF7jw8PD5v+M7r+KGj/6veLe8FmXvU7BWg3NzfBJqy2wYLy8Xhc2njg98ADrwEP5NGrl/Cr3VhlTYFO2USvBrbaTQj1eT/VyVV2zn05r9VqdX8EXHMJrUH0LEDyJAx+eZ2vQs8/9oz0/Pyc3d3dvfZLfbQwnn7bgBM+g+oZ/HG+XYINrICsML0M6bEZEFRepx62ys51njM46L0aOp/wnjpvMAjEAaB5eno69kfINTNov6KXT8A2SIoIkHnLfMbAE6ob5Hhx8+p8Dgvjse1zRShL4PHqBrzZlEevzrGpAWAM5Dpv6ThiQNB92joOuS+hvtoNY9uOwvqBP36u/w3a/6J5Ax4vbnP1FHhs8+ocrZ8p8IDLC+HpgdxsyknoaRDoqP0A+EnO6TP3aa9XSOjFOX+XRB7latc7Ojrq+qPr0FZexS/AnkZ7ih2BqQLwD0mugKN5dQOe83QQs76nwOO9d3Z2QtjOdWzKsAV/T+27MeTv675X2GoXEnq0YYlO30PHEnoCvu2PvUM7X8BjJ2B/BHz0dDPtM+G8QT4YDEq4GQjodxq1cG5l5skjpCErj4CZtXaAp1x1hoK8TTkZeZ2HjLy8/Vj3tYx8SO4x4DCXF/ANR8ahrbymCdhvgE/ArhrwJOzw5PSD5TkGLPoOfNa3z4Bnzm5gAzyJOtrj4W0uL8D5Qs5jci9k5LlvnNPXbf6vQaFOHQYalZ/v7+/n/kQ5tNUGPgUbO8IR1phjdjt/XW8uAZq1WHcHaPoG8HE9PMzlDfA0avnIwwM2wMc5eADfQnpsieW4CfU1uDR0bQLkeHgdQ0JPwDd13bLzLXn5kT9RDu3cAM9S3JuQGFgM/goBzxo8faKPAF/ECAQPb4DHpbOfgLc1eOD98eNHqAfgVm6DggaEtsqHRBIaIAjvh0wjdM+wxTYu5XU0yAyIGpjn12q1vkPrqrQsHOaHfdHDXbxS/ZqtryjwBjkw2o67dA3+Vx7ewLaMfNw7X8JPGW1V3mVrbZzHh+w85WTkydDHaUFI6MX36p+cnFw5tK75AD56xaoDn26rxeMOh8MyIrFEXhq1fAQ8sOLFbU890DMAEOrbUaAP+MMM3lvfEWvsHVYBSOixHh/n9yPW6fkO9f4jhfQth9Y1N8A/J4muvKLAp9tqSZbZtlq8vW2l/Qz4mIEvgbc5vK3BU49rhPhk5FW/Gb39WNebcffeRHYj5gtyduLFdrk8/LlD66q0Sk/+Hnizs+zNuvusgU+31QJ7ugEn3Ur7EfDpLjuW4Syct9DeYOfIewjsOhEBcF9cXNQdWtf8Ax/BniZ/MCmSvefpUl0VgAds8+pAabvs0s02FrUAMuVpItKhdTnw0SvattrgIT/YdFMF4NGy/2yuP1m2HxytfqFdms3OE68+TfaefxfwDq3L9S/EfNOA/ypEb4CPG2zKkPgd8CS1UvCp49C6XLMEfvnrCC76V+hyzZccWpfLoXW5XN+pvwUYANVwif2ag50RAAAAAElFTkSuQmCC) no-repeat 0 0;
+  //     @include background-size(100% 100%);
+  //   }
+  // }
+}
+/*--- End Profile Item ---*/

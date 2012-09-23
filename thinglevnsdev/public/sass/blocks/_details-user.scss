@@ -1,0 +1,63 @@
+.details-user {
+  // width: 467px;
+  display: inline-block;
+  margin: 43px auto 33px;
+  border: 3px solid #dddcdc;
+  @include border-radius(3px);
+
+  .inner {
+    overflow: hidden;
+    padding: 11px;
+    border: 1px solid #a0a0a0;
+  }
+
+  .img {
+    overflow: hidden;
+    float: left;
+    display: block;
+    width: 60px;
+    height: 70px;
+    border: 1px solid #3b3b3b;
+  }
+  .user-info {
+    float: left;
+    max-width: 235px;
+    margin: 0 14px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 24px;
+    @include text-shadow(#fff 0 1px 0);
+
+    .username {
+      @include force-wrap;
+
+      a {
+        font-weight: bold;
+        color: #111;
+        @include transition(all 0.2s);
+
+        &:hover {
+          color: #2a80c5;
+          text-decoration: none;
+        }
+      }
+    }
+    .collection {
+      color: #2d2d2d;
+      @include force-wrap;
+
+      a {
+        color: #2a80c5;
+        font-weight: bold;
+      }
+    }
+  }
+  .user-follow {
+    float: left;
+    padding: 18px 0 0 10px;
+
+    .btn-primary {
+      padding: 10px 30px;
+    }
+  }
+}

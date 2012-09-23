@@ -1,0 +1,26 @@
+/*--- Toolbox ---*/
+.settings {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin: 0 5px;
+  width: 29px;
+  height: 29px;
+  background: sprite($sprite,settings) no-repeat;
+}
+#bookmarklet-button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 40px;
+  @include background(linear-gradient(top, #dd730d, #bc620b));
+  @include border-radius(6px);
+  @include u(false,true);
+  @include box-shadow(rgba(#000,.23) 0 4px 1px);
+}
+#bookmarklet-button:hover {
+  @include box-shadow(rgba(#C2C2C2, 0.5) 0 0 4px inset, rgba(255, 255, 255, 0.7) 0 1px 2px inset,rgba(#C2C2C2,0.8) 0 1px,rgba(#E7E7E7,0.8) 0 2px 0,rgba(#000, 0.15) 0 4px 2px,rgba(34, 25, 25, 0.2) 0 2px 10px); 
+}
+/*--- end Toolbox ---*/

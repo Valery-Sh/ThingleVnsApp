@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thingle - Be passionate.</title>
+    <meta name="description" content="Create, collect, organize and share your favorite things on thingle.com. Thingle lets you organize and share the things you are passionate about. Organize your things into personal collections. Create Collections for any topic imaginable, such as architecture, fashion, events, food, travel. The possibilities are endless." />
+	<meta name="keywords" content="design,architecture,fashion,events,food,travel,beverages,social bookmarking,curation,curated,destinations,holiday,thingle" />	
+    <meta name="robots" />
+	<meta name="viewport" content="width=1050" id="viewport"/>
+    <!--[if lt IE 9]>
+    <script src="1348135696/js/ie9.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="1348135696/css/style.css" media="all">
+    <link rel="shortcut icon" href="1348135696/favicon.ico" />
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-30350386-2']);
+	  _gaq.push(['_trackPageview', window.location.hash]);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</head>
+<body helper="layout">
+
+<div id="error"></div>
+<div id="wrapper">
+    <!--[if IE]>
+    <div class="modal thingle-modal fade in" id="beta">
+        <div class="modal-inner message">
+            <div class="modal-header">
+                <h3>Sorry</h3>
+            </div>
+            <div class="modal-body">
+                <h3>Internet Explorer is not supported in beta version.<br>Please download and use <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a></h3>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade in"></div>
+    <![endif]-->
+    <section id="auth" view="auth"></section>
+    <header>
+        <div class="inner">
+            <a title="Share your favorite things on thingle.com" href="#" class="logo"><img width="90" height="35" title="Thingle - Be passionate" alt="Thingle Logo" src="images/thingle_logo.png"></a>
+            <div class="about">
+                <a href="#!about" class="about">About</a>
+                <div class="subnav about-subnav">
+                    <ul>
+                        <li><a href="#!help" title="How do I use Thingle?">Help</a></li>
+                        <li><a href="#!about" title="Information on Thingle">About Us</a></li>
+                        <li><a href="#!about/bookmarklet-tutorial" title="Install the +thingle bookmarklet">Bookmarklet</a></li>
+                        <li><a href="#!contact" title="Contact Thingle">Contact</a></li>
+                        <li><a href="#!legal" title="Read Our Terms And Conditions, Privacy Policy">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="things-item"><a href="javascript:void(0);">Categories</a>
+                        <div id="categories-menu" class="subnav things-subnav" view="categories-menu">
+                            <div class="b-featured-things clr">
+                                <h3>Collection Of The Week</h3>
+                                <h4 class="f-item-title">Hopp Schwiiz</h4>
+                                <figure>
+                                    <a href="/#!decks/4ffe1f717758960100018b52" class="img" title="Made in Switzerland by Jon Turnes"><img src="1348135696/tmp/madeinswitzerland.jpg" title="Made in Switzerland Collection" alt="Made in Switzerland" /></a>
+                                    <figcaption><a href="/#!decks/4ffe1f717758960100018b52" class="author" title="Check out Made in Switzerland">Made in Switzerland</a><a href="/#decks/4ffe1f717758960100018b52" class="author" title="Made in Switzerland by Jon Turnes">by Jon Turnes</a></figcaption>
+                                </figure>
+                                <div class="b-brought">
+                                    <div class="brought-label"></div>
+                                    <div class="brought-logo"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filter-item"><a href="javascript:void(0);">Filter by</a>
+                        <div class="subnav filter-subnav">
+                            <ul>
+                                <li><a href="#!followings/things">People you follow</a></li>
+                                <li><a href="#!profile/friends/things">All your friends</a></li>
+                                <li><a href="#!profile/things/best">Your most popular thingles</a></li>
+                                <li><a href="#!profile/things/liked">All the thingles you loved</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="b-search">
+                    <form action="#" method="" id="search-form">
+                        <input type="text" name="search" id="search" class="form-text">
+                        <input type="submit" value="s" class="form-submit">
+                    </form>
+                </div>
+            </nav>
+            <div view="user-controls"></div>
+        </div>
+    </header>
+
+    <aside id="shelf" class="bg1" view="shelf"></aside>
+
+    <div id="content">      
+        <section id="main"></section>
+        <section id="loadingbay"></section>
+    </div>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/lib/jquery-1.7.2.min.js'>\x3C/script>")</script>
+<script type="text/javascript" charset="utf-8" src="1348135696/js/lib/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="1348135696/js/lib/json2.js"></script>
+<script type="text/javascript" charset="utf-8" src="1348135696/js/lib/backbone-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="1348135696/js/lib/require.js" data-main="1348135696/js/app"></script>
+
+<div class="hide" id="dragproxy"></div>
+</body>
+</html>

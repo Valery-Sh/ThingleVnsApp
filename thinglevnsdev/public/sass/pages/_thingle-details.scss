@@ -1,0 +1,145 @@
+/*--- Thingle Details ---*/
+
+#thingle-details {
+  margin: -35px -15px 0 -30px;
+}
+
+a.details-edit {
+  display: block;
+  width: 38px;
+  height: 38px;
+  color: #3f3f3f;
+  border: 1px solid #000;
+  font: normal 18px/37px $P;
+  text-align: center;
+  background: #e8e8e8;
+  @include u(false,true);
+  @include border-radius(19px);
+  @include transition(all 0.2s);
+
+  &:hover {
+    color: #fff;
+    background: #2a80c5;
+  }
+}
+
+.edited {
+  a.details-edit {
+    color: #fff;
+    background: #2a80c5;
+  }
+}
+
+.details-title {
+  z-index: 3;
+  height: $details-nav-height;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: $header-height - 1;
+  position: fixed;
+  text-align: center;
+  background: #ECEBEB;
+
+  .inner {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  h1 {
+    display: inline-block;
+    max-width: 940px - 70;
+    color: #2d2d2d;
+    font-size: 30px;
+    line-height: 77px;
+    margin: 0 70px 0 0;
+    padding: 0 0 0 70px;
+    @include ellipsis;
+
+    form {
+      display: inline-block;
+    }
+
+    > i {
+      display: inline-block;
+      vertical-align: middle;
+      margin: -6px 20px 0 -70px;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      border: 1px solid #6d6d6d;
+      @include box-shadow(rgba(#000,.33) 0 3px 6px);
+
+      &:after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 18px;
+        position: absolute;
+        right: -10px;
+        bottom: 4px;
+        background: sprite($sprite,corner-small) no-repeat;
+      }
+    }
+
+    .control-group {
+      display: inline-block;
+
+      input[type=text] {
+        width: 732px;
+        height: 52px;
+      }
+      .btn {
+        vertical-align: middle;
+        height: 52px;
+        margin: 0;
+        padding: 10px 20px;
+        font: normal 18px $P;
+      }
+    }
+  }
+
+  a.details-edit {
+    position: absolute;
+    right: 0;
+    top: 22px;
+  }
+
+  &.edited {
+    h1 {
+      > i {
+        margin-top: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.details-content {
+  z-index: 2;
+  padding: 49px 0 0;
+  text-align: center;
+  background: #ecebeb;
+  position: relative;
+
+  .inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1px 10px;
+  }
+}
+
+@import "blocks/plugins/scrollable";
+@import "blocks/thingle-scrollable";
+@import "blocks/details-nav";
+@import "blocks/details-user";
+@import "blocks/details-block";
+@import "blocks/details-block-desc";
+@import "blocks/details-block-map";
+@import "blocks/details-comments";
+@import "blocks/details-collections";
+@import "blocks/details-tags";
+@import "blocks/details-editors";
+
+/*--- end Thingle Details ---*/

@@ -1,0 +1,45 @@
+<div class="modal-inner">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal"></button>
+        <h3>Page Builder</h3>
+    </div>
+    <div class="modal-body">
+        <div class="b-page-builder">
+            <div class="builder-list">
+                <div class="modal-description">
+                    <p>Select which content sections you want display for this thingle detail page.</p>
+                    <a href="javascript:void(0)" class="link save">Ok</a>
+                </div>
+                <div class="pages">
+                    <div class="select-all">
+                        <div class="checkbox"><input class="toggle-all" type="checkbox"></div>
+                        <div class="info">
+                            <span class="name">Select all page sections to display</span>
+                        </div>
+                    </div>
+                    <ul>
+						<% for (var section in sections) { %>                    	
+                        <li class="page">
+                            <div class="checkbox"><input class="toggle" name="<%= section %>" type="checkbox" <% if (settings[section]) { %>checked="checked"<% } %> ></div>
+                            <div class="info">
+                                <a href="javascript:void(0)" data-section="<%= section %>" class="details">i</a>
+                                <span class="name"><%= sections[section].name %></span>  
+                            </div>
+                        </li>
+						<% } %>
+                    </ul>
+                </div>
+            </div>
+            <div class="builder-item-content">
+                <div class="back-to-list"><a href="javascript:void(0)">[</a></div>
+                <div class="item-header">
+                    <label class="select">select <input class="toggle" type="checkbox"></label>
+                    <div class="name"></div>
+                </div>
+                <div class="item-content">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

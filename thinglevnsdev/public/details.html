@@ -1,0 +1,545 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thingle</title>
+    <meta name="viewport" content="width=1050" id="viewport"/>
+    <!--[if lt IE 9]>
+    <script src="js/ie9.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/drag_styles.css" media="all">
+</head>
+<body>
+
+<div id="wrapper">
+    <!--[if IE]>
+    <div class="modal thingle-modal fade in" id="beta">
+        <div class="modal-inner message">
+            <div class="modal-header">
+                <h3>Sorry</h3>
+            </div>
+            <div class="modal-body">
+                <h3>Internet Explorer is not supported in beta version.<br>Please download and use <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a></h3>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade in"></div>
+    <![endif]-->
+    <section id="auth" view="auth"></section>
+    <header>
+        <div class="inner">
+            <a href="/" class="logo"></a><a href="#" class="about">About</a>
+            <nav>
+                <ul>
+                    <li class="things-item"><a href="javascript:void(0);">Thingles</a></li>
+                    <li class="people-item"><a href="javascript:void(0);">People you follow</a></li>
+                </ul>
+                <div class="b-search">
+                    <form action="#" method="" id="search-form">
+                        <input type="text" name="search" id="search" class="form-text">
+                        <input type="submit" value="s" class="form-submit">
+                    </form>
+                </div>
+            </nav>
+            <div view="user-controls"></div>
+        </div>
+    </header>
+
+    <aside id="shelf" class="bg1" view="shelf"></aside>
+
+    <div id="content">
+        
+            <section id="main">
+                <!-- <div class="details-title" id="gallery">
+                    <h1><i class="avatar" style="background-image: url(tmp/img12.jpg)"></i>
+                        <form action="#" method="">
+                            <span>My Favorite Converse Shoe Of All Time!</span>
+                        </form>
+                    </h1>
+                    <a href="javascript:void(0);" class="details-edit">p</a>
+                </div>
+                <div class="scrollable-outer" style="overflow:hidden">
+                    <div class="scrollable thingle-scrollable one">
+                        <div class="items">
+                            <figure class="item active">
+                                <div class="img">
+                                    <img class="" src="tmp/img13.jpg" width="500" height="403" >
+                                </div>
+                                <figcaption>
+                                    <div class="tools-panel owner-edit"><a href="#" class="delete">#</a><a href="#" class="comment">w</a><a href="#" class="add">+</a><a href="#" class="like">k</a></div>
+                                    <div class="title">
+                                        <div class="info">
+                                            <a href="#" class="owner avatar" style="background-image: url(tmp/img1.jpg)"></a>
+                                            <h2><a href="#">Collection longggggggggggggggggggggggggggggggggggggggggggggggggggggg</a></h2>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <figure class="item">
+                                <div class="img">
+                                    <img class="" src="tmp/img14.jpg" width="500" height="403" >
+                                </div>
+                                <figcaption>
+                                    <div class="tools-panel owner-edit"><a href="#" class="delete">#</a><a href="#" class="comment">w</a><a href="#" class="add">+</a><a href="#" class="like">k</a></div>
+                                    <div class="title">
+                                        <div class="info">
+                                            <a href="#" class="owner avatar" style="background-image: url(tmp/img1.jpg)"></a>
+                                            <h2><a href="#">Collection</a></h2>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <figure class="item">
+                                <div class="img">
+                                    <img class="" src="tmp/img15.jpg" width="500" height="403" >
+                                </div>
+                                <figcaption>
+                                    <div class="tools-panel owner-edit"><a href="#" class="delete">#</a><a href="#" class="comment">w</a><a href="#" class="add">+</a><a href="#" class="like">k</a></div>
+                                    <div class="title">
+                                        <div class="info">
+                                            <a href="#" class="owner avatar" style="background-image: url(tmp/img1.jpg)"></a>
+                                            <h2><a href="#">Collection</a></h2>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <figure class="item">
+                                <div class="img">
+                                    <img class="" src="tmp/img14.jpg" width="500" height="403" >
+                                </div>
+                                <figcaption>
+                                    <div class="tools-panel owner-edit"><a href="#" class="delete">#</a><a href="#" class="comment">w</a><a href="#" class="add">+</a><a href="#" class="like">k</a></div>
+                                    <div class="title">
+                                        <div class="info">
+                                            <a href="#" class="owner avatar" style="background-image: url(tmp/img1.jpg)"></a>
+                                            <h2><a href="#">Collection</a></h2>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <figure class="item">
+                                <div class="img">
+                                    <img class="" src="tmp/img15.jpg" width="500" height="403" >
+                                </div>
+                                <figcaption>
+                                    <div class="tools-panel owner-edit"><a href="#" class="delete">#</a><a href="#" class="comment">w</a><a href="#" class="add">+</a><a href="#" class="like">k</a></div>
+                                    <div class="title">
+                                        <div class="info">
+                                            <a href="#" class="owner avatar" style="background-image: url(tmp/img1.jpg)"></a>
+                                            <h2><a href="#">Collection</a></h2>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            <figure class="item active">
+                                <div class="img">
+                                    <img class="" src="tmp/img13.jpg" width="500" height="403" >
+                                </div>
+                                <figcaption>
+                                    <div class="tools-panel owner-edit"><a href="#" class="delete">#</a><a href="#" class="comment">w</a><a href="#" class="add">+</a><a href="#" class="like">k</a></div>
+                                    <div class="title">
+                                        <div class="info">
+                                            <a href="#" class="owner avatar" style="background-image: url(tmp/img1.jpg)"></a>
+                                            <h2><a href="#">Collection</a></h2>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <a class="prev"></a>
+                        <a class="next"></a>
+                        <div class="add-photo-thingle"><a href="#">Add a photo to this Thingle</a></div>
+                    </div>
+                </div> -->
+                <nav class="details-nav">
+                    <ul>
+                        <li class="add-page"><a href="#">&</a></li>
+                        <li class="active"><a href="javascript:void(0)" target="#gallery">Gallery</a></li>
+                        <li><a target="#desc">Description</a></li>
+                        <li><a target="#map">Map</a></li>
+                        <li><a target="#comments">Comments</a></li>
+                        <li><a target="#colls">Collections</a></li>
+                        <li><a target="#tags">Tags</a></li>
+                        <li><a target="#editors">Editors</a></li>
+                        <li class="pages-settings"><a href="#">x</a></li>
+                    </ul>
+                </nav>
+                <div class="details-content">
+                    <div class="details-user bg1">
+                        <div class="inner">
+                            <a href="#" class="img avatar" style="background-image: url(tmp/img16.jpg);"></a>
+                            <div class="user-info">
+                                <div class="username"><a href="#">Katherine Longfellow</a></div>
+                                <div class="collection">posted from the collection<br><a href="#">Awesome Shoes</a></div>
+                            </div>
+                            <div class="user-follow">
+                                <a href="#" class="btn btn-primary">Follow</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-block" id="desc">
+                        <h2><span>Description</span></h2>
+                        <a href="javascript:void(0);" class="details-edit">p</a>
+                        <div class="desc">
+                            <form action="#" method="">
+                                <div class="desc-content" contenteditable="false">
+                                    <p>The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home. In a cosmic perspective, most human concerns seem insignificant, even petty. And yet our species is young and curious and brave and shows much promise. In the last few millennia we have made the most astonishing and unexpected discoveries about the Cosmos and our place within it, explorations that are exhilarating to consider. They remind us that humans have evolved to wonder, that understanding is a joy, that knowledge is prerequisite to survival. I believe our future depends powerfully on how well we understand this Cosmos in which we float like a mote of dust in the morning sky.</p>
+                                </div>
+                                <div class="controls bg1">
+                                    <button class="btn">Cancel</button><button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="details-block" id="map">
+                        <h2><span>Map</span></h2>
+                        <a href="javascript:void(0);" class="details-edit">p</a>
+                        <div class="map"><img src="tmp/map.jpg" alt=""></div>
+                    </div>
+                    <div class="details-block" id="comments">
+                        <h2><span>Comments</span></h2>
+                        <a href="javascript:void(0);" class="details-edit">p</a>
+                        <div class="details-comments">
+                            <div class="comments-nav">
+                                <a href="#" class="prev disabled"></a><a href="#" class="next"></a>
+                            </div>
+                            <div class="comment-new collapsed">
+                                <div class="inner bg1">
+                                    <form action="#" method="">
+                                        <div class="img"><span class="avatar" style="background-image:url(tmp/img1.jpg);"></span></div>
+                                        <div class="control-group">
+                                            <textarea placeholder="Add your comment"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Post</button>
+                                    </form>
+                                </div>
+                                <a href="javascript:void(0);" class="close"></a>
+                            </div>
+                            <ul class="comments">
+                                <li class="comment">
+                                    <div class="username"><a href="#">Nate Good</a></div>
+                                    <p>They remind us that humans have evolved to wonder, that understanding is a joy, that knowledge is prerequisite to survival. I believe our future depends powerfully on how well we understand this Cosmos in which we float like a mote of dust in the morning sky.</p>
+                                    <div class="date">04/02/12</div>
+                                </li>
+                                <li class="comment">
+                                    <div class="username"><a href="#">Katherine Longfellow</a></div>
+                                    <p>Cosmos in which we float like a mote of dust in the morning sky.</p>
+                                    <div class="date">04/02/12</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="details-block" id="colls">
+                        <h2><span>Collections</span></h2>
+                        <a href="javascript:void(0);" class="details-edit">p</a>
+                        <p class="description">This Thigle can also be found in the following collections</p>
+                        <div class="details-collections">
+                            <ul class="collections">
+                                <li>
+                                    <div class="collection">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img19.jpg);"></span></a>
+                                    </div>
+                                    <div class="owner">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img17.jpg);"></span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collection">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img19.jpg);"></span></a>
+                                    </div>
+                                    <div class="owner">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img18.jpg);"></span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collection">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img19.jpg);"></span></a>
+                                    </div>
+                                    <div class="owner">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img16.jpg);"></span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collection">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img19.jpg);"></span></a>
+                                    </div>
+                                    <div class="owner">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img17.jpg);"></span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collection">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img19.jpg);"></span></a>
+                                    </div>
+                                    <div class="owner">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img18.jpg);"></span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collection">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img19.jpg);"></span></a>
+                                    </div>
+                                    <div class="owner">
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img16.jpg);"></span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="details-block" id="tags">
+                        <h2><span>Tags</span></h2>
+                        <a href="javascript:void(0);" class="details-edit">p</a>
+                        <div class="details-tags bg1">
+                            <div class="inner">
+                                <form action="#" method="">
+                                    <div class="control-group">
+                                        <input type="text" placeholder="Add your tags">
+                                        <button class="btn btn-add" type="submit">Add tags</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tags-list">
+                            <div class="tag">Interior design<a href="#" class="remove">*</a></div>
+                            <div class="tag">Fashion<a href="#" class="remove">*</a></div>
+                            <div class="tag">Shoes<a href="#" class="remove">*</a></div>
+                            <div class="tag">Cool<a href="#" class="remove">*</a></div>
+                            <div class="tag">New<a href="#" class="remove">*</a></div>
+                            <div class="tag">Converse yeah<a href="#" class="remove">*</a></div>
+                            <div class="tag">Interior design<a href="#" class="remove">*</a></div>
+                            <div class="tag">Fashion<a href="#" class="remove">*</a></div>
+                            <div class="tag">Shoes<a href="#" class="remove">*</a></div>
+                            <div class="tag">Cool<a href="#" class="remove">*</a></div>
+                            <div class="tag">New<a href="#" class="remove">*</a></div>
+                            <div class="tag">Converse yeah<a href="#" class="remove">*</a></div>
+                        </div>
+                    </div>
+                    <div class="details-block" id="editors">
+                        <h2><span>Editors</span></h2>
+                        <a href="javascript:void(0);" class="details-edit">p</a>
+                        <div class="editors">
+                            <div class="scroll-pane horizontal">
+                                <ul class="list-names">
+                                    <li class="curator">
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img17.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Elizabeth McCaffery</a></div>
+                                            <div class="date">05/12/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img18.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Nate Good</a></div>
+                                            <div class="date">04/02/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img16.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Katherine Longfellow</a></div>
+                                            <div class="date">03/27/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img16.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Katherine Longfellow</a></div>
+                                            <div class="date">03/27/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img18.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Nate Good</a></div>
+                                            <div class="date">04/02/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img17.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Elizabeth McCaffery</a></div>
+                                            <div class="date">05/12/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img18.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Nate Good</a></div>
+                                            <div class="date">04/02/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img16.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Katherine Longfellow</a></div>
+                                            <div class="date">03/27/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img16.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Katherine Longfellow</a></div>
+                                            <div class="date">03/27/12</div>
+                                        </div>
+                                    </li><li>
+                                        <a href="#" class="revert">revert to this edit</a>
+                                        <a href="#" class="img"><span class="avatar" style="background-image:url(tmp/img18.jpg);"></span></a>
+                                        <div class="info">
+                                            <div class="username"><a href="#">Nate Good</a></div>
+                                            <div class="date">04/02/12</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </div>
+
+</div>
+
+<div class="subnav about-subnav">
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="legal.html">Legal</a></li>
+    </ul>
+</div>
+
+<div id="categories-menu" class="subnav things-subnav" view="categories-menu">
+    <div class="b-featured-things clr">
+        <h3>Featured Thingles</h3>
+        <h4 class="f-item-title">Food &amp; Drink</h4>
+        <figure>
+            <a href="#" class="img"><img src="tmp/food_drink.jpg" alt="Food &amp; Drink" width="98" height="98"></a>
+            <figcaption><a href="#" class="author">Thomas Kurtz</a>Delicious bites</figcaption>
+        </figure>
+        <div class="b-brought">
+            <div class="brought-label">Brought to you by</div>
+            <div class="brought-logo"><img src="tmp/amelie_emily.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8" src="js/lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/json2.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/backbone-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/require.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+<script src="js/lib/jquery.tools.min.js"></script>
+<script src="js/lib/jquery.jscrollpane.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var th_list = $('.thingle-scrollable'),
+            sc_pos = $('.scrollable-position');
+
+        th_list.scrollable({
+            speed: 250,
+            onBeforeSeek: function(){
+                this.getItems().removeClass('active');
+            },
+            onSeek: function(){
+                sc_pos.children('.current').text(this.getIndex()+1);            
+            }
+        });
+
+        var api = th_list.data("scrollable");
+
+        $('.next, .prev',th_list).click(function(){
+            api.getItems().eq(api.getIndex()).addClass('active');
+        });
+
+        //////////////////////////////////
+
+        var comm_new = $('.comment-new');
+
+        comm_new.find('textarea').focusin(function(){
+            comm_new.removeClass('collapsed')
+        })
+        comm_new.children('.close').click(function(){
+            comm_new.addClass('collapsed')  
+        })
+
+        //////////////////////////////////
+
+        $('.details-edit').click(function(){
+            $(this).parent('.details-block').toggleClass('edited');
+        })
+
+        //////////////////////////////////
+
+        var d_title = $('.details-title'),
+            d_title_form = d_title.find('form');
+
+        $('.details-edit',d_title).click(function(){
+            if (!d_title.hasClass('edited')) {
+                var d_title_text = d_title_form.children('span').text();
+
+                d_title_form.html('<div class="control-group">'+
+                                        '<div class="input-append">'+
+                                            '<input type="text" value="'+ d_title_text +
+                                            '"><button class="btn btn-primary" type="submit">3</button>'+
+                                        '</div>'+
+                                    '</div>');
+                d_title_form.find('input[type=text]').focus();
+            }
+        })
+
+        //////////////////////////////////
+
+        var d_desc = $('#desc');
+
+        $('.details-edit',d_desc).click(function(){
+            d_desc.hasClass('edited') ? editable=true : editable=false;
+            $('.desc-content',d_desc).prop('contenteditable',editable).focus();
+        })
+
+        //////////////////////////////////
+
+        var top_limit = $('.details-title').outerHeight() + $('.scrollable-outer').outerHeight();
+
+        $('#content').scroll(function(){
+            var self = $(this),
+                d_nav = $('.details-nav');
+
+            if (self.scrollTop() >= top_limit) {
+                d_nav.css({
+                    'position':'fixed',
+                    'top': $('header').outerHeight()-1
+                })
+            } else {
+                d_nav.css('position','static')
+            }
+        })
+
+        ///////////////////////////////////
+
+        $('.details-nav li>a').click(function(e){
+            var content = $('#content'),
+                d_nav = $('.details-nav'),
+                id = $(this).prop('target'),
+                id_top = $(id).position().top + content.scrollTop() - d_nav.outerHeight() * (d_nav.css('position') != 'fixed' ? 2 : 1);
+
+            $('.details-nav li').removeClass('active');
+            $(this).parent().addClass('active')
+
+            content.animate({scrollTop: id_top},"normal");
+        })
+
+        ///////////////////////////////////
+
+        $('.scroll-pane', '#editors').jScrollPane();
+
+    })
+</script>
+
+</body>
+</html>

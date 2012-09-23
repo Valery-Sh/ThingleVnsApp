@@ -1,0 +1,63 @@
+.b-paginator {
+  width: $content-width;
+  position: absolute;
+  left: 0;
+  bottom: 41px;
+  text-align: center;
+  
+  ul {
+    display: inline;
+
+    li {
+      @include ie7-inline;
+      border: {
+        style: solid;
+        width: 1px 1px 1px 0;
+        color: #e4e4e2;
+      };
+      color: #838383;
+      
+      &:first-child {
+        border-left-width: 1px;
+      }
+      span,
+      a {
+        display: inline-block;
+        min-width: 29px - 8*2;
+        padding: 0 8px;
+        line-height: 28px;
+        @include u(false,true);
+      }
+      a:hover {
+        color: #838383;
+      }
+      &.prev {
+        span, a {
+          padding-left: 35px;
+        }
+        a:hover,
+        span {
+          background: sprite($sprite,arrow-left-noactive,8px,11px) no-repeat;
+        }
+        a {
+          background: sprite($sprite,arrow-left,8px,11px) no-repeat;
+        }
+      } 
+      &.next {
+        span, a {
+          padding-right: 35px;
+        }
+        a:hover,
+        span {
+          background: sprite($sprite,arrow-right-noactive,100%,11px) no-repeat;
+        }
+        a {
+          background: sprite($sprite,arrow-right,100%,11px) no-repeat;
+        }
+      } 
+      &.current {
+        font-weight: bold;
+      }
+    }
+  }  
+}

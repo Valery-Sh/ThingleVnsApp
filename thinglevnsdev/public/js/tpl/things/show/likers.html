@@ -1,0 +1,16 @@
+<h2><span><%= title %></span></h2>
+<div class="editors">
+    <div class="scroll-pane horizontal">
+        <ul class="list-names">
+            <% _.each(likers, function(liker) { %>
+            <% if (!liker) return;%>
+            <li>
+                <a href="#!users/<%= liker.get("_id") %>" class="img"><span class="avatar" style="background-image:url(<%= liker.get("picture").medium %>);"></span></a>
+                <div class="info">
+                    <div class="username"><a href="#!users/<%= liker.get("_id") %>"><%= liker.get("firstName") %> <%= liker.get("lastName") %></a></div>
+                </div>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>

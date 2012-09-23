@@ -1,0 +1,41 @@
+// html, body {
+//  height: 100%;
+// }
+body {
+  padding: 0;
+  margin: 0;
+  // overflow-x: auto;
+  // overflow-y: hidden;
+  background: $default-body-bg;
+  font: $default-font-size $default-font-family;
+  color: $default-font-color;
+}
+// input, textarea {
+//   font: $default-font-size $default-inputs-font-family;
+//   color: $default-font-color;
+// }
+.clr {
+  zoom: 1;
+  
+  &:before, &:after {
+    content: "\0020"; display: block; height: 0; overflow: hidden;   
+  }
+  &:after {
+    clear: both;
+  }
+}
+a {
+  @include u($default-link-underline);
+  @include link-colors($default-link-color,$default-link-color);
+  @include moz-dots-remove(false,true);
+}
+input, .combo-wrapper, button, select, textarea, p {
+  font: $default-font-size $default-font-family;
+}
+
+@import "blocks/elements/button";
+@import "blocks/elements/userpic";
+@import "blocks/elements/avatar";
+@import "blocks/elements/block";
+@import "blocks/elements/message";
+@import "blocks/elements/action-link";

@@ -1,0 +1,119 @@
+.subnav {
+  z-index: 100;
+  // overflow: hidden;
+  visibility: hidden;
+  // display: none;
+  height: 0;
+  padding: 7px;
+  margin: 44px 0 0 4px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border: 1px solid #acabab;
+  background: #f8f8f8;
+  text-align: left;
+  @include box-shadow(rgba(#000,.29) 0 2px 4px);
+  @include opacity(0);
+  @include transition(opacity 0.2s);
+  // @include inline-blocks;
+  @include nowrap;
+
+  &:before {
+    content: "";
+    display: block;
+    // width: 27px;
+    width: auto;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    background: sprite($sprite,popup-things-arrow,18px) no-repeat;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding: 7px 15px;
+      border-top: 1px solid #dbdbdb;
+      text-align: left;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      a {
+        display: block;
+        color: #272626;
+        line-height: 22px;
+        @include nowrap;
+        @include u(false,true);
+
+        &:hover {
+          color: #178bc7;
+          font-weight: bold;
+        }
+      }
+      &.active a {
+        color: #178bc7;
+      }
+    }
+  }
+
+  .col {
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 0 0 36px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@import "blocks/featured-things";
+
+.profile-subnav {
+  margin: 76px 0 0 -38px;
+  padding: 0;
+  visibility: hidden;
+
+  &:before {
+    left: 43px;
+  }
+
+  ul {
+    text-align: center;
+  }
+  .b-featured-things {
+    float: none;
+    min-height: 0;
+    margin: 5px 0 0;
+    border-width: 1px 0 0;
+
+    h3 {
+      font-size: 14px;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .img {
+      display: block;
+      width: 98px;
+      height: 98px;
+      padding: 0;
+      margin: 0 auto;
+      border: 0;
+      @include box-shadow(none);
+    }
+  }
+}
+
+.about-subnav {
+  margin-left: -18px;
+}

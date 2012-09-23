@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo
+echo "Install modules required for the build"
+npm install wrench
+
+BUILD_VERSION=$(date '+%s')
+echo
+echo "Use version $BUILD_VERSION"
+
+echo
+echo "Build front-end"
+node build.js -o ./public/public.build clean
+node build.js -o ./public/public.build copy
+node r.js -o public/js/app.build.js
+node build.js -v $BUILD_VERSION -o ./public/public.build replace
+
+echo
+echo "Build back-end"
+node build.js -o ./config/config.build clean
+node build.js -o ./config/config.build copy
+node build.js -v $BUILD_VERSION -o ./config/config.build replace
+

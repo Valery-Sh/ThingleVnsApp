@@ -1,0 +1,41 @@
+$accordion: ".accordion";
+$accordion-title: "h2";
+$accordion-pane: ".package";
+$accordion-pane-title: "h3";
+
+#{$accordion} {
+
+  // accordion pane
+  #{$accordion-pane} {
+    border-width:0 2px;
+    display:none;
+    color:#fff;
+    font-size:12px;
+    position: relative;
+
+    // a title inside pane
+    // #{$accordion-pane-title} {
+    //   font-weight:normal;
+    //   margin:0;
+    //   font-size:16px;
+    //   color:#999;
+    // }
+  }
+
+  // accordion header
+  #{$accordion-title} {
+    background: #e4e4e4;
+    @include background(linear-gradient(top,#f0f0f0,#e4e4e4));
+    border-top: 1px solid #fff;
+    cursor:pointer;
+    height: 69px;
+    width: 463px;
+    position: relative;
+
+    // currently active header
+    &.current {
+      cursor:default;
+    }
+  }
+  
+}

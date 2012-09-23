@@ -1,0 +1,28 @@
+<div class="modal-inner">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal"></button>
+        <h3><%= title %></h3>
+    </div>
+    <div class="modal-body">
+        <div class="modal-top">
+            <div class="modal-top-inner">
+                <div class="img-outer">
+                    <div class="img"><img src="<%= src || thing.getCoverPicture('small').url %>" alt=""></div>
+                </div>
+                <div class="info">
+                    <div class="success">
+                        <strong>Success!</strong>
+                        <div class="btns">
+                            <a href="#!things/<%= thing.get('_id') %>" id="thingle-link" class="btn btn-primary inner-link">Take me to it now</a>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-dismiss="modal">Close and return</a>
+                        </div>
+                        <div class="more"><a href="javascript:void(0)" id="add-more-link">add more photos to this thingle</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!about/bookmarklet-tutorial" class="grab-area inner-link">Grab things from anywhere on the web with the +thingle tool!</a>
+    </div>
+</div>
