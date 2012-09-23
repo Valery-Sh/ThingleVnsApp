@@ -1,3 +1,6 @@
+/** 
+ * 1.
+ */
 var express = require('express'),
     RedisStore = require('connect-redis')(express),
     userSession = require(global.approot + '/models/user-session').create,
